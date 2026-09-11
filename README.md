@@ -1,52 +1,134 @@
-# Ataraxia Vault Template
+<div align="center">
+  <h1>Obsidian Template</h1>
+  <p><strong>A home for your notes. A system for your thinking.</strong></p>
+  <p>PARA organization, Zettelkasten thinking, and periodic planning — with shared rules for humans and AI agents.</p>
+  <p>
+    <strong>English</strong> ·
+    <a href="README.ko.md">한국어</a>
+  </p>
+  <p>
+    <img src="https://img.shields.io/badge/Obsidian-7C3AED?style=flat&amp;logo=obsidian&amp;logoColor=white" alt="Obsidian" />
+    <img src="https://img.shields.io/badge/Markdown-000000?style=flat&amp;logo=markdown&amp;logoColor=white" alt="Markdown" />
+    <img src="https://img.shields.io/badge/EN%20%7C%20KO-bilingual-1F6FEB?style=flat" alt="Bilingual English and Korean" />
+  </p>
+  <p>
+    <a href="90.%20Settings/01%20Guideline/01.%20Placement%20Guide.md">Placement</a>
+    ·
+    <a href="90.%20Settings/02%20Templates/README.md">Templates</a>
+    ·
+    <a href="AGENTS.md">Agent guidelines</a>
+  </p>
+</div>
 
-[한국어](README.ko.md)
+## Less organizing. More connecting.
 
-A portable Obsidian vault skeleton derived from a personal knowledge system. It keeps a numbered PARA-like layout, one canonical location per note, and all system rules under `90. Settings`. Personal notes, credentials, plugin caches, plugin binaries, theme binaries, and machine-specific state are not included.
+Start with a working structure, not someone else's personal notes. Give each note one canonical home, connect ideas across projects, and plan from year to day. Humans and agents share the same placement rules.
 
-Open this folder as a new vault in Obsidian. Capture into `00. Inbox`, then file each note using [90. Settings/01 Guideline/01. Placement Guide.md](90.%20Settings/01%20Guideline/01.%20Placement%20Guide.md). Periodic note templates live under `90. Settings/02 Templates`; home notes, indexes, and standalone Bases files are empty placeholders for you to add.
+- **One home per note.** File by what the note is, not who wrote it or which tool captured it.
+- **PARA plus Zettelkasten.** Projects and areas stay separate from literature notes and evergreen ideas.
+- **A planning chain that matches review.** Folder numbers are labels; the hierarchy is the period chain.
+- **Portable on purpose.** Personal notes, credentials, plugin caches, plugin binaries, theme binaries, and machine-specific state are not included.
+
+## Features
+
+| Feature | What you get |
+| --- | --- |
+| Numbered PARA layout | Ten roots; one canonical path per note |
+| Zettelkasten split | Source-derived thinking in Literature Notes; self-contained ideas in Permanent Notes |
+| Periodic planning | Templater `auto/` notes for year, quarter, month, week, day, and dashboards |
+| Agent-readable rules | Nested `AGENTS.md` at vault root, Settings, and Templates |
+| Embedded views | Core Bases tables in period templates; Dashboard Overdue needs Dataview |
+| Empty placeholders | Home, indexes, and standalone Bases folders are yours to fill |
+
+## Capture to work
+
+This is a filing model, not an automatic pipeline. Nothing here moves notes for you.
+
+**Capture** (`00. Inbox`) → **original** (`85. Raw`) · **interpretation** (`30. Literature Notes`) · **idea** (`40. Permanent Notes`) · **work** (`15. Work`)
+
+Keep captured originals in Raw regardless of collector. Create work under a project or area only when the note has an owner. Read the [Placement Guide](90.%20Settings/01%20Guideline/01.%20Placement%20Guide.md) before filing the first note.
 
 ## Roots
 
-Ten roots are shipped. Do not treat extra personal-vault roots as part of this template.
+Ten roots are shipped. Extra folders from a personal vault are not part of this template.
 
-- `00. Inbox` — unsorted capture; file notes from here as soon as their destination is clear.
-- `10. Time` — periodic planning and review (daily, weekly, monthly, quarterly, yearly, plus dashboards).
-- `15. Work` — projects with an end condition, ongoing areas, finished work, and tasks.
-- `30. Literature Notes` — thinking derived from an external source (research, reviews, meetings).
-- `40. Permanent Notes` — self-contained ideas and principles that stand on their own.
-- `50. AI` — AI-generated or AI-synthesized material that has no owning project.
-- `70. Collections` — reusable catalogs of people, prompts, maps of content, music, places, Excalidraw drawings, organizations, GitHub, and channels. `70. Collections/06 Excalidraw` is present as an empty folder.
-- `80. References` — books, papers, and attachments.
-- `85. Raw` — captured external originals, regardless of who or what captured them.
-- `90. Settings` — vault rules, templates, home, indexes, and bases.
+| Root | Role |
+| --- | --- |
+| `00. Inbox` | Unsorted capture |
+| `10. Time` | Daily, weekly, monthly, quarterly, yearly, and dashboards |
+| `15. Work` | Projects, areas, archive, and tasks |
+| `30. Literature Notes` | Research, reviews, and meetings derived from a source |
+| `40. Permanent Notes` | Ideas and principles that stand on their own |
+| `50. AI` | AI-generated or synthesized material with no owning project |
+| `70. Collections` | People, prompts, MOCs, music, places, Excalidraw, organizations, GitHub, channels |
+| `80. References` | Books, papers, and attachments |
+| `85. Raw` | Captured external originals |
+| `90. Settings` | Rules, templates, home, indexes, and bases |
 
-## Shipped settings versus what you must install
+`70. Collections/06 Excalidraw` is present as an empty folder.
 
-`.obsidian/community-plugins.json` is a list of plugin **IDs**. It does not install plugins. This template has no `.obsidian/plugins/` directory.
+## Time
 
-`.obsidian/appearance.json` sets `cssTheme` to `Minimal` and enables two shipped snippets under `.obsidian/snippets/`. There is no `.obsidian/themes/` directory, so Minimal is not installed until you add it (or change the theme). `obsidian-minimal-settings` is an ID only.
+Planning hierarchy: **Year → Quarter → Month → Week → Day**. Folder numbers are not that hierarchy.
 
-`.obsidian/core-plugins.json` enables core Bases and the core Templates plugin, and leaves **Daily notes disabled**. There is no `.obsidian/daily-notes.json`. Templater settings are not shipped (`templater-obsidian` is an ID only).
+Daily titles are `YYYY-MM-DD`. Weekly titles are ISO week year `GGGG-WW` plus `W` (example `2026-37W`). Period wikilinks are navigation only. Creating a daily note can create missing dashboards for yesterday, today, and tomorrow; it does not create week, month, quarter, or year notes.
 
-`90. Settings/02 Templates/auto/Daily Note.template.md` **is** shipped. Creating a daily note from it can create missing dashboards for yesterday, today, and tomorrow. It does not create weekly, monthly, quarterly, or yearly notes. Wikilinks in the periodic templates are navigation only.
+Formats, ISO weeks, and Templater mapping: [Placement Guide](90.%20Settings/01%20Guideline/01.%20Placement%20Guide.md) · [Templates](90.%20Settings/02%20Templates/README.md).
 
-## Daily and weekly naming
+## Quick start
 
-Daily notes are titled `YYYY-MM-DD` in `10. Time/01 Daily Notes`. Weekly notes are titled with the ISO week year `GGGG-WW` plus `W` (example: `2026-37W`) in `10. Time/02 Weekly Notes`. Daily notes write `week` as that same weekly title; use it when you create the weekly note.
+1. **Clone and open as a vault**
 
-There is no automatic period cascade. Wikilinks in the periodic templates are navigation only.
+   ```sh
+   git clone https://github.com/GoBeromsu/Obsidian-template.git
+   ```
 
-Folder, format, and Templater steps are in [90. Settings/02 Templates/README.md](90.%20Settings/02%20Templates/README.md).
+   Open the cloned folder as a new vault in Obsidian. Copying the directory works the same way.
 
-## How to start
+2. **Install what the templates need**
 
-1. Copy or clone this directory and open it as an Obsidian vault.
-2. Read [90. Settings/01 Guideline/01. Placement Guide.md](90.%20Settings/01%20Guideline/01.%20Placement%20Guide.md) before filing the first note.
-3. Install only the community plugins and theme you will use. In Obsidian, install plugins from **Settings → Community plugins** and themes from **Appearance → Themes**. [Templater](https://github.com/SilentVoid13/Templater) is required for the `auto/` and `manual/` templates to run. Dataview is required for the Dashboard Overdue query. Excalidraw is required only if you store drawings in `70. Collections/06 Excalidraw`. The [Minimal](https://github.com/kepano/obsidian-minimal) theme is named in `appearance.json` but not shipped as files. IDs in `community-plugins.json` are not a substitute for installation.
-4. Configure Templater and, if you want the Daily notes command, enable and configure core Daily notes. Exact folder, format, and template paths are in [90. Settings/02 Templates/README.md](90.%20Settings/02%20Templates/README.md).
-5. Drop unsorted capture into `00. Inbox`.
-6. Create work under `15. Work/01 Project` or `15. Work/02 Area` when a note has an owner.
-7. Keep captured originals in `85. Raw`; keep system files in `90. Settings`.
+   In Obsidian, install community plugins from **Settings → Community plugins**. [Templater](https://github.com/SilentVoid13/Templater) is required for `auto/` and `manual/` templates to run. Install Dataview if you want the Dashboard Overdue query. IDs in `community-plugins.json` are not installations.
+
+3. **Configure paths**
+
+   Follow [Templates](90.%20Settings/02%20Templates/README.md) for Templater (template folder `90. Settings/02 Templates`, then folder templates) and, if you want the Daily notes command, for enabling core Daily notes. Core Daily notes is off until you configure it. Core Bases is already enabled.
+
+4. **Capture, then file**
+
+   Read the [Placement Guide](90.%20Settings/01%20Guideline/01.%20Placement%20Guide.md) first. Drop unsorted capture into `00. Inbox`. Create work under `15. Work/01 Project` or `15. Work/02 Area` when a note has an owner. Keep system files in `90. Settings`.
 
 These steps are setup instructions, not a claim that periodic creation, Bases views, or theme appearance were end-to-end verified in Obsidian.
+
+## Agent guidelines
+
+Read the nearest contract before creating or moving a note. Human guides ship as English/Korean pairs; neither language outranks the other.
+
+| Layer | Role |
+| --- | --- |
+| [Vault](AGENTS.md) | Ten-root map and vault-wide conventions |
+| [Settings](90.%20Settings/AGENTS.md) | Placement SSOT, empty home/index/bases, settings-layer rules |
+| [Templates](90.%20Settings/02%20Templates/AGENTS.md) | `auto/` vs `manual/`, title formats, navigation vs creation |
+
+<details>
+<summary>Plugins, theme, and setup limits</summary>
+
+`.obsidian/community-plugins.json` lists plugin **IDs** only. This template has no `.obsidian/plugins/` directory.
+
+`.obsidian/appearance.json` sets `cssTheme` to `Minimal` and enables two shipped snippets under `.obsidian/snippets/`. There is no `.obsidian/themes/` directory. Install [Minimal](https://github.com/kepano/obsidian-minimal) yourself if you want that theme, or change the theme. `obsidian-minimal-settings` is an ID only.
+
+`.obsidian/core-plugins.json` enables core Bases and core Templates, and leaves **Daily notes disabled**. There is no `.obsidian/daily-notes.json`. Templater settings are not shipped (`templater-obsidian` is an ID only). Core Templates is not the engine for `<% %>` files.
+
+Excalidraw is required only if you store drawings in `70. Collections/06 Excalidraw`. The `periodic-notes` plugin is not in the ID list and is not used.
+
+</details>
+
+<details>
+<summary>Periodic links do not cascade</summary>
+
+Wikilinks in the periodic templates are navigation only. There is no automatic period cascade.
+
+The shipped Daily template can create missing dashboards for yesterday, today, and tomorrow. It does not create weekly, monthly, quarterly, or yearly notes. See [Templates](90.%20Settings/02%20Templates/README.md).
+
+Core Daily notes, if you enable it, creates daily files only.
+
+</details>
