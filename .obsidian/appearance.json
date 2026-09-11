@@ -1,0 +1,12 @@
+{
+  "cssTheme": "Minimal",
+  "baseFontSize": 16,
+  "theme": "system",
+  "translucency": false,
+  "enabledCssSnippets": [
+    "fix-nested-bullets",
+    "mermaid-wide"
+  ],
+  "baseFontSizeAction": true,
+  "nativeMenus": true
+}

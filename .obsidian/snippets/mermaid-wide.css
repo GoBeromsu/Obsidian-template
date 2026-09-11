@@ -1,0 +1,20 @@
+/* Make Mermaid diagrams horizontally scrollable and break out of content line width */
+
+/* Reading mode */
+.markdown-reading-view .block-language-mermaid {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+/* Live preview / source mode */
+.cm-preview-code-block .block-language-mermaid {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+/* Let the SVG be as wide as the diagram needs */
+.block-language-mermaid .mermaid svg {
+  max-width: none !important;
+  width: auto !important;
+  height: auto;
+}

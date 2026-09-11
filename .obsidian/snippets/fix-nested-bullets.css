@@ -1,0 +1,36 @@
+/* /* Fix reading mode: Minimal theme strips padding from all ul/ol globally.
+   Restore indentation for all depths. */
+.markdown-preview-view ul,
+.markdown-preview-view ol {
+  padding-inline-start: var(--list-indent, 2em) !important;
+} */
+
+/* Fix reading mode: Obsidian parser quirk creates OL elements from "NN. text"
+   inside bullet lists. OL start=NN, li text="FolderName" (NN. consumed as counter).
+   Restore write mode appearance: bullet disc + NN. prefix via ::marker. */
+
+/* Hide parent UL>LI bullet (it's empty; the nested OL>LI carries the content) */
+.markdown-preview-view ul > li:has(> ol) {
+  list-style-type: none;
+}
+.markdown-preview-view ul > li:has(> ol) > .list-bullet {
+  display: none !important;
+}
+
+/* Collapse OL's extra indent so numbered items align with normal bullets */
+.markdown-preview-view ul > li:has(> ol) > ol {
+  padding-inline-start: 0 !important;
+}
+
+/* Match write mode: outermost list starts at content edge, not indented */
+.markdown-preview-section > ul {
+  padding-inline-start: 0 !important;
+}
+
+/* Replace OL's decimal counter with bullet + zero-padded number */
+.markdown-preview-view ul ol {
+  list-style-type: none !important;
+}
+.markdown-preview-view ul ol > li::marker {
+  content: "• " counter(list-item, decimal-leading-zero) ". ";
+}

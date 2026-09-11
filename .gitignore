@@ -1,0 +1,24 @@
+# Local state and credentials
+.DS_Store
+.trash/
+.env
+.env.*
+*.log
+*.bak
+.gjc/
+.claude/
+.codex/
+.omc/
+.oms/
+node_modules/
+
+# Ship only the reviewed portable Obsidian settings and snippets.
+.obsidian/*
+!.obsidian/app.json
+!.obsidian/appearance.json
+!.obsidian/core-plugins.json
+!.obsidian/community-plugins.json
+!.obsidian/snippets/
+.obsidian/snippets/*
+!.obsidian/snippets/fix-nested-bullets.css
+!.obsidian/snippets/mermaid-wide.css
