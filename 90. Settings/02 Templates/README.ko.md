@@ -1,5 +1,5 @@
 ---
-created_by: gjc
+created_by: agent
 authorship: agent
 ---
 # 템플릿

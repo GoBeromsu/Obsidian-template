@@ -1,5 +1,5 @@
 ---
-created_by: gjc
+created_by: agent
 authorship: agent
 ---
 <!-- Parent: ../AGENTS.md -->
@@ -47,7 +47,7 @@ No template build, test, CLI-init, or git-init command exists; none is claimed t
 - Keep `*.template.md` names and current engine syntax. Human-facing stamps stay `created_by: user` and `authorship: user`; do not layer a second metadata contract for ordinary template use.
 - Preserve `## Thinking` headings in Daily and Dashboard templates. After instantiation, `## Thinking` is human-only.
 - Embedded ` ```base ` blocks need core Bases (enabled). Dashboard Overdue needs Dataview installed; the ID in `community-plugins.json` is not install proof. No custom Bases `type: timeline` view is shipped.
-- New agent-authored notes outside these templates follow session provenance (`created_by` agent identifier, `authorship: agent`). Report schema conflicts instead of rewriting template frontmatter.
+- New agent-authored notes outside these templates use the local note convention `created_by: agent` and `authorship: agent`. Report schema conflicts instead of rewriting template frontmatter.
 
 ## Important Files
 
