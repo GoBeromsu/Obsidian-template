@@ -8,15 +8,15 @@ authorship: agent
 
 ## Project Overview
 
-`90. Settings/` is vault infrastructure: placement rules, Templater files, and empty home / index / Bases placeholders. Changes here can affect the whole vault. Inherit `../AGENTS.md`. Do not copy the ten-root table here.
+`90. Settings/` is vault infrastructure: placement rules, Templater files, empty home / index / Bases placeholders, and Excalidraw drawings. Changes here can affect the whole vault. Inherit `../AGENTS.md`. Do not copy the ten-root table here.
 
 Human guides in this tree are English/Korean pairs: equivalent translations of one contract, not two note homes. Neither language outranks the other. When instructions change, update both files.
 
 ## Architecture & Data Flow
 
-Placement SSOT is the bilingual Placement Guide under `01 Guideline/`. Templates live under `02 Templates/` (`auto/` periodic, `manual/` on-demand). Standalone home, index, and Bases folders ship empty; periodic views that exist are embedded in templates. `.obsidian/` is a sibling of this folder at vault root, not inside it.
+Placement SSOT is the bilingual Placement Guide under `01 Guideline/`. Templates live under `02 Templates/` (`auto/` periodic, `manual/` on-demand). Standalone home, index, and Bases folders ship empty; periodic views that exist are embedded in templates. Drawings live under `07 Excalidraw/`. `.obsidian/` is a sibling of this folder at vault root, not inside it.
 
-Do not add Handbook folders, extra Templater categories, or nested `AGENTS.md` under `03 Home/`, `04 Index/`, or `05 Bases/`. Child agent contract: `02 Templates/AGENTS.md`.
+Do not add Handbook folders, extra Templater categories, or nested `AGENTS.md` under `03 Home/`, `04 Index/`, `05 Bases/`, or `07 Excalidraw/`. Child agent contract: `02 Templates/AGENTS.md`.
 
 ## Key Directories
 
@@ -27,6 +27,7 @@ Do not add Handbook folders, extra Templater categories, or nested `AGENTS.md` u
 | `03 Home/` | Empty home placeholder |
 | `04 Index/` | Empty index placeholder |
 | `05 Bases/` | Empty standalone Bases placeholder |
+| `07 Excalidraw/` | Drawings and Excalidraw assets (number `07` avoids Handbook `06`; no Handbook in this template) |
 
 ## Development Commands
 
@@ -39,19 +40,27 @@ No Settings-specific build, test, CLI-init, or git-init command exists; none is 
 - `## Thinking` is human-only. Do not overwrite another writer's note, delete to resolve conflicts, or reorganize beyond the task.
 - Keep Templater syntax and `.base` files as they are. Do not layer a second metadata schema on human template stamps (`created_by: user`, `authorship: user`).
 - Record root add/rename/renumber decisions in both Placement Guide files. Do not treat empty placeholders as populated.
+- Excalidraw drawings stay in `07 Excalidraw/`. Do not add a Handbook to hold drawings.
 
 ## Important Files
 
 - `../AGENTS.md` — template-root agent contract and ten-root map.
 - `../README.md` and `../README.ko.md` — equivalent start guides.
 - `01 Guideline/01. Placement Guide.md` and `01. Placement Guide.ko.md` — equivalent placement contracts.
-- `02 Templates/AGENTS.md` — auto/manual, engines, dates.
-- `02 Templates/README.md` and `README.ko.md` — equivalent Templater and optional Daily notes setup.
+- `02 Templates/AGENTS.md` — auto/manual, engines, dates, Dashboard hook.
+- `02 Templates/README.md` and `README.ko.md` — equivalent Templater and Daily notes setup (preloaded JSON, install still required).
+- `02 Templates/auto/Daily Note.template.md` — Daily creator; may create dashboards only.
+- `02 Templates/manual/task.template.md` — task fields matching Dashboard queries.
+- `../.obsidian/daily-notes.json` — preloaded Daily notes folder `10. Time/01 Daily Notes`, format `YYYY-MM-DD`, core template empty.
+- `../.obsidian/plugins/templater-obsidian/data.json` — preloaded Templater folder rules; Dashboard not mapped.
+- `../.obsidian/plugins/obsidian-excalidraw-plugin/data.json` — Excalidraw folder-path config for `07 Excalidraw/` (config, not binaries). Parent owns plugin path migration.
 
 ## Runtime/Tooling Preferences
 
-Plugin IDs live in `../.obsidian/community-plugins.json`; they are not installations. Confirm `../.obsidian/plugins/` and `../.obsidian/themes/` before depending on a plugin or theme; this template ships neither. `appearance.json` names Minimal; two snippets under `../.obsidian/snippets/` are shipped. Core Bases is on; core Daily notes is off; no `daily-notes.json` or Templater `data.json` is shipped. `periodic-notes` is unused. Configure engines from the bilingual template READMEs, not by assuming preloaded folder templates.
+Plugin IDs live in `../.obsidian/community-plugins.json`; they are not installations. `.obsidian/plugins/` exists as an allowlist for portable **config** (`templater-obsidian/data.json`, `obsidian-excalidraw-plugin/data.json`). That is not a plugin install: binaries, `main.js`, and theme packages are not shipped. Confirm plugin binaries before depending on a plugin or theme. `appearance.json` names Minimal; two snippets under `../.obsidian/snippets/` are shipped.
+
+Core Bases is on. Core Daily notes is on; do not assume a core Daily template. Templater folder templates cover the five period folders only; Dashboard is created once by the Daily hook. Install and enable Templater before `<% %>` runs. `periodic-notes` is unused. No Handbook.
 
 ## Testing & QA
 
-Confirm inheritance to `../AGENTS.md`, bilingual pairs updated together, no duplicated root taxonomy, empty `03 Home/` / `04 Index/` / `05 Bases/`, no extra `AGENTS.md` in those folders, no Handbook path, preserved provenance and `## Thinking`, unchanged template/config files unless assigned, and no claim that plugin IDs or `cssTheme: Minimal` mean packages are installed.
+Confirm inheritance to `../AGENTS.md`, bilingual pairs updated together, no duplicated root taxonomy, empty `03 Home/` / `04 Index/` / `05 Bases/`, drawings root `07 Excalidraw/` with no Handbook path and no stale Collections Excalidraw route, no extra `AGENTS.md` in Home/Index/Bases/Excalidraw, preserved provenance and `## Thinking`, unchanged template/config files unless assigned, config-versus-binary distinction for `.obsidian/plugins/`, and no claim that plugin IDs, `data.json`, or `cssTheme: Minimal` mean packages are installed.

@@ -60,12 +60,12 @@ Ten roots are shipped. Extra folders from a personal vault are not part of this 
 | `30. Literature Notes` | Research, reviews, and meetings derived from a source |
 | `40. Permanent Notes` | Ideas and principles that stand on their own |
 | `50. AI` | AI-generated or synthesized material with no owning project |
-| `70. Collections` | People, prompts, MOCs, music, places, Excalidraw, organizations, GitHub, channels |
+| `70. Collections` | People, prompts, MOCs, music, places, organizations, GitHub, channels |
 | `80. References` | Books, papers, and attachments |
 | `85. Raw` | Captured external originals |
-| `90. Settings` | Rules, templates, home, indexes, and bases |
+| `90. Settings` | Rules, templates, home, indexes, bases, and Excalidraw drawings |
 
-`70. Collections/06 Excalidraw` is present as an empty folder.
+`90. Settings/07 Excalidraw` is the canonical folder for drawings and assets.
 
 ## Time
 
@@ -73,7 +73,7 @@ Planning hierarchy: **Year → Quarter → Month → Week → Day**. Folder numb
 
 Daily titles are `YYYY-MM-DD`. Weekly titles are ISO week year `GGGG-WW` plus `W` (example `2026-37W`). Period wikilinks are navigation only. Creating a daily note can create missing dashboards for yesterday, today, and tomorrow; it does not create week, month, quarter, or year notes.
 
-Formats, ISO weeks, and Templater mapping: [Placement Guide](90.%20Settings/01%20Guideline/01.%20Placement%20Guide.md) · [Templates](90.%20Settings/02%20Templates/README.md).
+Task notes use `manual/task.template.md` fields `type`, `done`, `gtd`, `project`, `plan`, and `due` (plus date stamps) so Dashboard queries can match them. Formats, ISO weeks, engine mapping, and those fields: [Placement Guide](90.%20Settings/01%20Guideline/01.%20Placement%20Guide.md) · [Templates](90.%20Settings/02%20Templates/README.md) **Engine setup**.
 
 ## Quick start
 
@@ -89,9 +89,9 @@ Formats, ISO weeks, and Templater mapping: [Placement Guide](90.%20Settings/01%2
 
    In Obsidian, install community plugins from **Settings → Community plugins**. [Templater](https://github.com/SilentVoid13/Templater) is required for `auto/` and `manual/` templates to run. Install Dataview if you want the Dashboard Overdue query. IDs in `community-plugins.json` are not installations.
 
-3. **Configure paths**
+3. **Confirm engine setup**
 
-   Follow [Templates](90.%20Settings/02%20Templates/README.md) for Templater (template folder `90. Settings/02 Templates`, then folder templates) and, if you want the Daily notes command, for enabling core Daily notes. Core Daily notes is off until you configure it. Core Bases is already enabled.
+   Core Daily notes is enabled. Templater folder templates for daily, weekly, monthly, quarterly, and yearly notes ship as `data.json` (not plugin binaries). Follow [Templates](90.%20Settings/02%20Templates/README.md) **Engine setup**. Core Bases is already enabled.
 
 4. **Capture, then file**
 
@@ -112,13 +112,13 @@ Read the nearest contract before creating or moving a note. Human guides ship as
 <details>
 <summary>Plugins, theme, and setup limits</summary>
 
-`.obsidian/community-plugins.json` lists plugin **IDs** only. This template has no `.obsidian/plugins/` directory.
+`.obsidian/community-plugins.json` lists plugin **IDs** only. Plugin IDs and shipped `data.json` are config, not installations. Confirm `.obsidian/plugins/` for binaries (`main.js`, `manifest.json`); do not treat a plugins directory or `data.json` as proof that plugin packages are installed.
 
 `.obsidian/appearance.json` sets `cssTheme` to `Minimal` and enables two shipped snippets under `.obsidian/snippets/`. There is no `.obsidian/themes/` directory. Install [Minimal](https://github.com/kepano/obsidian-minimal) yourself if you want that theme, or change the theme. `obsidian-minimal-settings` is an ID only.
 
-`.obsidian/core-plugins.json` enables core Bases and core Templates, and leaves **Daily notes disabled**. There is no `.obsidian/daily-notes.json`. Templater settings are not shipped (`templater-obsidian` is an ID only). Core Templates is not the engine for `<% %>` files.
+`.obsidian/core-plugins.json` enables core Bases, core Templates, and **Daily notes**. `.obsidian/daily-notes.json` is shipped (folder `10. Time/01 Daily Notes`, format `YYYY-MM-DD`, template empty so Templater applies). Templater folder templates for Daily, Weekly, Monthly, Quarterly, and Yearly are in `.obsidian/plugins/templater-obsidian/data.json`. That file is not plugin binaries. Core Templates is not the engine for `<% %>` files.
 
-Excalidraw is required only if you store drawings in `70. Collections/06 Excalidraw`. The `periodic-notes` plugin is not in the ID list and is not used.
+Excalidraw drawings belong in `90. Settings/07 Excalidraw`. `.obsidian/plugins/obsidian-excalidraw-plugin/data.json` is path config, not an installation. The `periodic-notes` plugin is not in the ID list and is not used.
 
 </details>
 
@@ -127,8 +127,8 @@ Excalidraw is required only if you store drawings in `70. Collections/06 Excalid
 
 Wikilinks in the periodic templates are navigation only. There is no automatic period cascade.
 
-The shipped Daily template can create missing dashboards for yesterday, today, and tomorrow. It does not create weekly, monthly, quarterly, or yearly notes. See [Templates](90.%20Settings/02%20Templates/README.md).
+The shipped Daily template can create missing dashboards for yesterday, today, and tomorrow. It does not create weekly, monthly, quarterly, or yearly notes. Task fields for Dashboard queries (`type`, `done`, `gtd`, `project`, `plan`, `due`) are in `manual/task.template.md`. See [Templates](90.%20Settings/02%20Templates/README.md) **Engine setup**.
 
-Core Daily notes, if you enable it, creates daily files only.
+Core Daily notes is enabled and creates daily files only.
 
 </details>

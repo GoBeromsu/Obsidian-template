@@ -1,0 +1,40 @@
+{
+  "data_version": 2,
+  "command_timeout": 5,
+  "templates_folder": "90. Settings/02 Templates",
+  "templates_pairs": [],
+  "trigger_on_file_creation_mode": "folder",
+  "auto_jump_to_cursor": false,
+  "jump_to_cursor_after_file_name": false,
+  "shell_path": "",
+  "user_scripts_folder": "",
+  "folder_templates": [
+    {
+      "folder": "10. Time/01 Daily Notes",
+      "template": "90. Settings/02 Templates/auto/Daily Note.template.md"
+    },
+    {
+      "folder": "10. Time/02 Weekly Notes",
+      "template": "90. Settings/02 Templates/auto/Weekly Notes.template.md"
+    },
+    {
+      "folder": "10. Time/03 Monthly Notes",
+      "template": "90. Settings/02 Templates/auto/Monthly Notes.template.md"
+    },
+    {
+      "folder": "10. Time/05 Quarterly Notes",
+      "template": "90. Settings/02 Templates/auto/Quarterly Notes.template.md"
+    },
+    {
+      "folder": "10. Time/04 Yearly Notes",
+      "template": "90. Settings/02 Templates/auto/Yearly Note.template.md"
+    }
+  ],
+  "file_templates": [],
+  "syntax_highlighting": true,
+  "syntax_highlighting_mobile": false,
+  "enabled_templates_hotkeys": [],
+  "startup_templates": [],
+  "intellisense_render": "1",
+  "ignore_folders_on_creation": []
+}

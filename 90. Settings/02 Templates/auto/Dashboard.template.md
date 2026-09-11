@@ -35,7 +35,7 @@ SORT file.day DESC
 ```
 
 ## Tasks
-> Multi-day, delegated, or deadline work belongs here. Day-to-day checkboxes stay on the daily note; Overdue will surface them.
+> Multi-day, delegated, or deadline work belongs here. Use `manual/task.template.md` (`type: task`, `done`, `gtd`, `project`, `plan`, `due`). Day-to-day checkboxes stay on the daily note; Overdue will surface them.
 
 ```base
 filters:

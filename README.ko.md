@@ -65,12 +65,12 @@ authorship: agent
 | `30. Literature Notes` | 외부 자료에서 나온 연구, 리뷰, 회의 |
 | `40. Permanent Notes` | 그 자체로 서는 아이디어와 원칙 |
 | `50. AI` | 소유 프로젝트가 없는 AI 생성·합성 자료 |
-| `70. Collections` | 사람, 프롬프트, MoC, 음악, 장소, Excalidraw, 조직, GitHub, 채널 |
+| `70. Collections` | 사람, 프롬프트, MoC, 음악, 장소, 조직, GitHub, 채널 |
 | `80. References` | 책, 논문, 첨부 파일 |
 | `85. Raw` | 캡처한 외부 원본 |
-| `90. Settings` | 규칙, 템플릿, 홈, 인덱스, Bases |
+| `90. Settings` | 규칙, 템플릿, 홈, 인덱스, Bases, Excalidraw |
 
-`70. Collections/06 Excalidraw`는 빈 폴더로 있습니다.
+`90. Settings/07 Excalidraw`는 그림과 에셋의 정규 폴더입니다.
 
 ## 시간
 
@@ -78,7 +78,7 @@ authorship: agent
 
 일간 제목은 `YYYY-MM-DD`입니다. 주간 제목은 ISO 주 연도 `GGGG-WW` 뒤에 `W`를 붙인 형식입니다(예: `2026-37W`). 주기 위키링크는 탐색용입니다. 일간 노트를 만들면 어제·오늘·내일의 빠진 대시보드를 만들 수 있고, 주·월·분기·연 노트는 만들지 않습니다.
 
-형식, ISO 주, Templater 연결: [배치 가이드](90.%20Settings/01%20Guideline/01.%20Placement%20Guide.ko.md) · [템플릿](90.%20Settings/02%20Templates/README.ko.md).
+할 일 노트는 `manual/task.template.md`의 `type`, `done`, `gtd`, `project`, `plan`, `due` 필드(날짜 스탬프 포함)를 써서 대시보드 질의와 맞춥니다. 형식, ISO 주, 엔진 매핑, 그 필드: [배치 가이드](90.%20Settings/01%20Guideline/01.%20Placement%20Guide.ko.md) · [템플릿](90.%20Settings/02%20Templates/README.ko.md) **엔진 설정**.
 
 ## 시작하기
 
@@ -94,9 +94,9 @@ authorship: agent
 
    Obsidian에서 커뮤니티 플러그인은 **설정 → 커뮤니티 플러그인**으로 설치합니다. `auto/`와 `manual/` 템플릿을 실행하려면 [Templater](https://github.com/SilentVoid13/Templater)가 필요합니다. 대시보드 Overdue 쿼리를 쓰려면 Dataview를 설치합니다. `community-plugins.json`의 ID는 설치를 대신하지 않습니다.
 
-3. **경로 설정**
+3. **엔진 설정 확인**
 
-   Templater(템플릿 폴더 `90. Settings/02 Templates`, 이어서 폴더 템플릿)와, Daily notes 명령을 쓸 경우 코어 Daily notes 켜기는 [템플릿](90.%20Settings/02%20Templates/README.ko.md)을 따르십시오. 코어 Daily notes는 설정하기 전까지 꺼져 있습니다. 코어 Bases는 이미 켜져 있습니다.
+   코어 Daily notes는 켜져 있습니다. 일·주·월·분기·연용 Templater 폴더 템플릿은 `data.json`으로 포함되어 있으며, 플러그인 바이너리가 아닙니다. [템플릿](90.%20Settings/02%20Templates/README.ko.md) **엔진 설정**을 따르십시오. 코어 Bases는 이미 켜져 있습니다.
 
 4. **수집한 뒤 배치**
 
@@ -117,13 +117,13 @@ authorship: agent
 <details>
 <summary>플러그인, 테마, 설정 한계</summary>
 
-`.obsidian/community-plugins.json`은 플러그인 **ID** 목록입니다. 이 템플릿에는 `.obsidian/plugins/` 디렉터리가 없습니다.
+`.obsidian/community-plugins.json`은 플러그인 **ID** 목록입니다. 플러그인 ID와 포함된 `data.json`은 설정이지 설치가 아닙니다. 바이너리(`main.js`, `manifest.json`)는 `.obsidian/plugins/`에서 확인하십시오. 플러그인 디렉터리나 `data.json`만으로는 패키지가 설치된 것이 아닙니다.
 
 `.obsidian/appearance.json`은 `cssTheme`을 `Minimal`로 두고, `.obsidian/snippets/` 아래 함께 제공되는 스니펫 두 개를 켭니다. `.obsidian/themes/` 디렉터리는 없습니다. 그 테마를 쓰려면 [Minimal](https://github.com/kepano/obsidian-minimal)을 직접 설치하거나 테마를 바꾸십시오. `obsidian-minimal-settings`도 ID만 있습니다.
 
-`.obsidian/core-plugins.json`은 코어 Bases와 코어 Templates 플러그인을 켜고 **Daily notes는 끕니다**. `.obsidian/daily-notes.json`은 없습니다. Templater 설정도 포함되지 않습니다(`templater-obsidian`은 ID만 있습니다). 코어 Templates는 `<% %>` 파일의 엔진이 아닙니다.
+`.obsidian/core-plugins.json`은 코어 Bases, 코어 Templates, **Daily notes**를 켭니다. `.obsidian/daily-notes.json`이 포함됩니다(폴더 `10. Time/01 Daily Notes`, 형식 `YYYY-MM-DD`, 템플릿은 비워 두어 Templater가 적용). 일·주·월·분기·연용 Templater 폴더 템플릿은 `.obsidian/plugins/templater-obsidian/data.json`에 있습니다. 그 파일은 플러그인 바이너리가 아닙니다. 코어 Templates는 `<% %>` 파일의 엔진이 아닙니다.
 
-Excalidraw는 `70. Collections/06 Excalidraw`에 그림을 둘 때만 필요합니다. `periodic-notes` 플러그인은 ID 목록에 없고 사용하지 않습니다.
+Excalidraw 그림은 `90. Settings/07 Excalidraw`에 둡니다. `.obsidian/plugins/obsidian-excalidraw-plugin/data.json`은 경로 설정이며 설치가 아닙니다. `periodic-notes` 플러그인은 ID 목록에 없고 사용하지 않습니다.
 
 </details>
 
@@ -132,8 +132,8 @@ Excalidraw는 `70. Collections/06 Excalidraw`에 그림을 둘 때만 필요합�
 
 주기 템플릿의 위키링크는 탐색용입니다. 자동 주기 연쇄는 없습니다.
 
-포함된 일간 템플릿은 어제·오늘·내일의 빠진 대시보드를 만들 수 있습니다. 주간, 월간, 분기, 연간 노트는 만들지 않습니다. [템플릿](90.%20Settings/02%20Templates/README.ko.md)을 보십시오.
+포함된 일간 템플릿은 어제·오늘·내일의 빠진 대시보드를 만들 수 있습니다. 주간, 월간, 분기, 연간 노트는 만들지 않습니다. 대시보드 질의용 할 일 필드(`type`, `done`, `gtd`, `project`, `plan`, `due`)는 `manual/task.template.md`에 있습니다. [템플릿](90.%20Settings/02%20Templates/README.ko.md) **엔진 설정**을 보십시오.
 
-코어 Daily notes를 켜면 일간 파일만 만듭니다.
+코어 Daily notes는 켜져 있으며 일간 파일만 만듭니다.
 
 </details>
