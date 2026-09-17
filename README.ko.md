@@ -23,6 +23,8 @@ authorship: agent
     ·
     <a href="90.%20Settings/02%20Templates/README.ko.md">템플릿</a>
     ·
+    <a href="90.%20Settings/01%20Guideline/03.%20Agent%20Skills.ko.md">에이전트 스킬</a>
+    ·
     <a href="AGENTS.md">에이전트 가이드라인</a>
   </p>
 </div>
@@ -45,6 +47,7 @@ authorship: agent
 | 주기 계획 | 연·분기·월·주·일·대시보드용 Templater `auto/` 노트 |
 | 에이전트가 읽는 규칙 | 볼트 루트, Settings, Templates의 중첩 `AGENTS.md` |
 | 임베디드 보기 | 주기 템플릿의 코어 Bases 표, 대시보드 Overdue는 Dataview 필요 |
+| 에이전트 스킬 | 포함된 `obsidian` 스킬 하나; Claude Code, Codex, Antigravity에서 모두 동작 |
 | 빈 자리 | 홈, 인덱스, 독립 Bases 폴더는 직접 채웁니다 |
 
 ## 수집에서 작업까지

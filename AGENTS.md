@@ -10,7 +10,7 @@ Read the root `Me.md` first for the user's identity, values, thinking methods, A
 
 This directory is a portable Obsidian vault template. It ships a 10-root skeleton, Templater files (including Daily and `manual/task.template.md`), Excalidraw drawings under `90. Settings/07 Excalidraw`, and portable `.obsidian` JSON (including Daily notes enablement and Templater `data.json`) without personal notes, credentials, plugin caches, plugin or theme binaries, or machine-specific state. Faith (`60. Saint`) and publication (`25. Digital Garden`) roots are intentionally absent. There is no Handbook folder.
 
-Human start, placement, writing/AI, and template guides ship as English/Korean pairs. The two languages are equivalent translations of one contract, not two note homes. Neither language outranks the other. When those instructions change, update both files.
+Human start, placement, writing/AI, agent-skills, and template guides ship as English/Korean pairs. The two languages are equivalent translations of one contract, not two note homes. Neither language outranks the other. When those instructions change, update both files.
 
 Nearest nested agent contracts: `90. Settings/AGENTS.md` and `90. Settings/02 Templates/AGENTS.md`. Do not add `AGENTS.md` to empty skeleton folders.
 
@@ -38,6 +38,8 @@ The beginner lecture starts with the blank root `Me.md` personal briefing (`# Me
 | `80. References/` | Books, papers, and attachments |
 | `85. Raw/` | Captured external originals |
 | `90. Settings/` | Rules, templates, home, indexes, bases, and Excalidraw drawings (`07 Excalidraw`) |
+| `.agents/skills/` | Vendored Agent Skills; real directory read by Codex and Antigravity |
+| `.claude/skills/` | Symlink to `.agents/skills/`; read by Claude Code |
 
 Do not add, rename, or renumber roots without recording the decision in `90. Settings/01 Guideline/` (both language files). `90. Settings/03 Home/`, `04 Index/`, and `05 Bases/` ship empty.
 
@@ -55,6 +57,7 @@ Open a copied or cloned template directory as an Obsidian vault. No application 
 - Root presence does not grant write permission. Follow the adopter's local policy and exact-note authorization before editing an existing note.
 - `## Thinking` sections are human-only. Do not overwrite another writer's note, delete notes to resolve conflicts, or reorganize beyond the current task.
 - If an adopter adds symlinks, preserve the target layout and do not move or delete targets without the governing policy decision.
+- The vendored skill under `.agents/skills/obsidian/` is upstream content kept verbatim. Fix problems upstream and re-vendor, rather than editing the copy in place. The skill teaches generic Obsidian mechanics and never overrides this vault's own placement, writing, or permission guides.
 
 ## Important Files
 
@@ -62,6 +65,8 @@ Open a copied or cloned template directory as an Obsidian vault. No application 
 - `90. Settings/AGENTS.md` — settings-layer agent contract.
 - `90. Settings/01 Guideline/01. Placement Guide.md` and `01. Placement Guide.ko.md` — equivalent placement contracts.
 - `90. Settings/01 Guideline/02. Writing and AI.md` and `02. Writing and AI.ko.md` — equivalent writing, minimal properties, privacy, and AI-boundary guidance.
+- `90. Settings/01 Guideline/03. Agent Skills.md` and `03. Agent Skills.ko.md` — equivalent guides to the vendored skill's setup, discovery paths, and boundaries.
+- `.agents/skills/README.md` — provenance record for the vendored skill (source, commit, license, update procedure).
 - `Me.md` (vault root) — single blank personal briefing with the five `##` sections listed above and Korean `> 역할:` writing guidance; agent-authored scaffold, not a human-stamped Templater file. It is the one deliberate root-level note exception; do not move it into `00. Inbox`, rename its sections, or add a second `Me` template.
 - `CLAUDE.md` — simple pointer to root `Me.md` for user context and `AGENTS.md` for repository rules.
 - `90. Settings/02 Templates/AGENTS.md` — template-layer agent contract.
