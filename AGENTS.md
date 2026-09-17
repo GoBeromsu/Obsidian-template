@@ -1,5 +1,11 @@
 # Repository Guidelines
 
+## User context and repository rules
+
+Read the root `Me.md` first for the user's identity, values, thinking methods, AI collaboration preferences, and influences. Its labelled guidance is a prompt, not a statement of the user's beliefs; blank answers mean unknown. Do not invent answers or infer preferences from examples. Keep the public template blank; filled answers belong only in the adopter's own vault.
+
+`Me.md` holds user context, while this `AGENTS.md` and the nearest nested contracts hold repository rules. Context and links do not grant permission to edit or follow linked notes. `CLAUDE.md` is only a pointer to `Me.md` and `AGENTS.md`, not a second rule source.
+
 ## Project Overview
 
 This directory is a portable Obsidian vault template. It ships a 10-root skeleton, Templater files (including Daily and `manual/task.template.md`), Excalidraw drawings under `90. Settings/07 Excalidraw`, and portable `.obsidian` JSON (including Daily notes enablement and Templater `data.json`) without personal notes, credentials, plugin caches, plugin or theme binaries, or machine-specific state. Faith (`60. Saint`) and publication (`25. Digital Garden`) roots are intentionally absent. There is no Handbook folder.
@@ -16,7 +22,7 @@ Periodic templates under `90. Settings/02 Templates/auto/` insert navigation wik
 
 `auto/` templates are for periodic Time notes (folder-template / insert-on-create). `manual/` is on-demand insert (`note.template.md`, `task.template.md`, `project.template.md`, `log.template.md`). Title formats, engines, and creation rules live in `90. Settings/02 Templates/AGENTS.md` and the bilingual template READMEs.
 
-The beginner lecture starts with the generic root `Me.md` worksheet (bilingual intro; fixed `###` sections: Summary Statement, First Principles, How I Think, Working Preferences, plus `## Thinking`), a three-question Gemini interview using sanitized excerpts, and the adopter's own Map of Content (MOC) in `70. Collections/03 MoC` linking existing notes with a reason for each link. The worksheet is not a personal biography or an AI integration; the general project-hub/log workflow in `15. Work/01 Project` remains available but is not part of this beginner path. Keep filled answers in the adopter's vault; `## Thinking` stays human-only.
+The beginner lecture starts with the blank root `Me.md` personal briefing (`# Me` and five `##` sections: Summary Statement, First Principles, How I Think, Working Preferences, 나에게 영향을 주는 사람), a three-question Gemini interview using sanitized excerpts, and the adopter's own Map of Content (MOC) in `70. Collections/03 MoC` linking existing notes with a reason for each link. Each briefing section has Korean `> 역할:` guidance explicitly labelled as writing guidance. Thinking methods are optional examples to explain when and how they are used, not prescribed steps or asserted beliefs; influences are names only, with none supplied. The briefing is not a filled biography or an AI integration; the general project-hub/log workflow in `15. Work/01 Project` remains available but is not part of this beginner path. Keep filled answers in the adopter's vault; `## Thinking` sections elsewhere stay human-only.
 
 ## Key Directories
 
@@ -41,7 +47,7 @@ Open a copied or cloned template directory as an Obsidian vault. No application 
 
 ## Code Conventions & Common Patterns
 
-- Read this file, then the nearest nested `AGENTS.md`, then the bilingual placement and template guides before creating or moving a note. Placement SSOT: `90. Settings/01 Guideline/01. Placement Guide.md` and `01. Placement Guide.ko.md`.
+- Read root `Me.md` for user context first, then this file, the nearest nested `AGENTS.md`, and the bilingual placement and template guides before creating or moving a note. Placement SSOT: `90. Settings/01 Guideline/01. Placement Guide.md` and `01. Placement Guide.ko.md`.
 - Ownership determines placement even when an agent wrote the content. Keep captured originals in `85. Raw` regardless of collector, and never duplicate a note across roots.
 - Completed tasks stay in their current project, area, or task path; record completion according to the adopter's task policy instead of requiring a physical move.
 - Periodic titles follow `90. Settings/02 Templates` (`YYYY-MM-DD`, `GGGG-WW` plus `W`, `YYYY-MM`, `YYYY-QN`, `YYYY`, `YYYY-MM-DD Dashboard`). Template files use `*.template.md` in `auto/` or `manual/`. Do not invent extra Templater categories. Human-facing stamps stay `created_by: user` and `authorship: user`.
@@ -56,7 +62,8 @@ Open a copied or cloned template directory as an Obsidian vault. No application 
 - `90. Settings/AGENTS.md` — settings-layer agent contract.
 - `90. Settings/01 Guideline/01. Placement Guide.md` and `01. Placement Guide.ko.md` — equivalent placement contracts.
 - `90. Settings/01 Guideline/02. Writing and AI.md` and `02. Writing and AI.ko.md` — equivalent writing, minimal properties, privacy, and AI-boundary guidance.
-- `Me.md` (vault root) — single context worksheet with four `###` sections (Summary Statement, First Principles, How I Think, Working Preferences) and blank Korean-guided answer areas; agent-authored scaffold, not a human-stamped Templater file. It is the one deliberate root-level note exception; do not move it back into `00. Inbox`, rename its sections, or add a second `Me` template.
+- `Me.md` (vault root) — single blank personal briefing with the five `##` sections listed above and Korean `> 역할:` writing guidance; agent-authored scaffold, not a human-stamped Templater file. It is the one deliberate root-level note exception; do not move it into `00. Inbox`, rename its sections, or add a second `Me` template.
+- `CLAUDE.md` — simple pointer to root `Me.md` for user context and `AGENTS.md` for repository rules.
 - `90. Settings/02 Templates/AGENTS.md` — template-layer agent contract.
 - `90. Settings/02 Templates/README.md` and `README.ko.md` — equivalent Templater and core Daily notes setup (**Engine setup**).
 - `90. Settings/02 Templates/auto/Daily Note.template.md` — shipped daily template; may create dashboards only.

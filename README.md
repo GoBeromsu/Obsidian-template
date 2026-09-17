@@ -114,12 +114,18 @@ These steps are setup instructions, not a claim that periodic creation, Bases vi
 One short path after the vault is open. Details: [Writing and AI](90.%20Settings/01%20Guideline/02.%20Writing%20and%20AI.md).
 
 1. Before writing, read [Beginner syntax](90.%20Settings/01%20Guideline/02.%20Writing%20and%20AI.md#beginner-syntax): six Markdown basics and a tiny example.
-2. Edit [`Me.md`](Me.md) at the vault root. It is one fill-in worksheet with four `###` sections (Summary Statement, First Principles, How I Think, Working Preferences), each with a blank Korean-guided answer area, and it is the only canonical `Me` note. Use generic facts. Do not put secrets, credentials, or machine paths in it.
+2. Edit [`Me.md`](Me.md) at the vault root. It is one worksheet with five `##` sections: **Summary Statement** (who you are, what you're doing now), **First Principles** (the values or judgment standards you use), **How I Think** (when and how you use thinking methods — bottom-up, top-down, and first-principles reasoning are optional examples, not prescribed steps or fixed beliefs), **Working Preferences** (how you want AI to collaborate with you), and **나에게 영향을 주는 사람** (names only of the people who influence you — no essays, no names supplied by default). It is the only canonical `Me` note. Use generic facts. Do not put secrets, credentials, or machine paths in it.
+
+   Each section opens with a Korean `> 역할:` blockquote labelled **(작성 안내)**. That line tells you what to write; it is not a filled answer. Write your own answer, in your own words, underneath it. If you quote an external source, use `>` with the source named — never invent a quotation. After filling the sections in, set `authorship: mixed` in the frontmatter (keep `created_by: agent`).
 3. Share **only sanitized excerpts** with Gemini on the web. Paste text yourself. Gemini does not get automatic access to this vault.
 4. Ask Gemini to ask you **exactly three** clarifying questions and wait. Answer them, then request a draft. Review it yourself and save **only accepted** answers into the relevant `Me.md` sections by hand.
 5. Build your own Map of Content (MOC) in `70. Collections/03 MoC`: pick existing notes related to what you just wrote in `Me.md` and link each one with a short reason. This is a human-curated table of contents, not a generated index or a project hub.
 
 Treat filled `Me.md` and any linked notes as private. They are **not automatically excluded from Git or sharing**; do not push them to a public repository.
+
+### Three files, three roles
+
+[`Me.md`](Me.md) holds your identity and preferences as a person. [`AGENTS.md`](AGENTS.md) holds this repository's rules. [`CLAUDE.md`](CLAUDE.md) is a simple pointer to those two files; it does not duplicate either one's content. Agents read root `Me.md` first for user context, then the applicable `AGENTS.md` contract. Reading `Me.md` does not grant automatic integration or expanded authorization — each section already carries a labelled `> 역할:` guidance line (marked 작성 안내); a blank answer area below it is unfilled and unknown, not a fact about the adopter.
 
 ## Agent guidelines
 

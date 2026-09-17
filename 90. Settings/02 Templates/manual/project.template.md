@@ -13,8 +13,8 @@ This insert does not create files, folders, or other notes.
 -->
 
 ## Context
-Review your canonical `me` note (initially `00. Inbox/me.md`), then link it here. Use the existing note, not a duplicate profile.
-정규 `me` 노트(처음에는 `00. Inbox/me.md`)를 검토한 뒤 여기서 연결하세요. 프로필을 복제하지 말고 기존 노트를 쓰세요.
+Review the canonical root `Me.md`, then link it here as `[[Me]]`. Use the existing note, not a duplicate profile.
+정규 루트 `Me.md`를 검토한 뒤 여기서 `[[Me]]`로 연결하세요. 프로필을 복제하지 말고 기존 노트를 쓰세요.
 
 ## Objective
 What this project finishes. / 이 프로젝트가 끝내는 일.
