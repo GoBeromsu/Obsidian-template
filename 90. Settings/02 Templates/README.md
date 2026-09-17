@@ -31,6 +31,8 @@ Every shipped template file uses the `*.template.md` suffix:
 - `auto/Dashboard.template.md`
 - `manual/note.template.md`
 - `manual/task.template.md`
+- `manual/project.template.md`
+- `manual/log.template.md`
 
 ## Engine setup (Daily notes and Templater folders are preloaded)
 
@@ -77,8 +79,13 @@ Generic example date: **2026-01-15** (yesterday `2026-01-14`, tomorrow `2026-01-
    using `auto/Dashboard.template.md` via `tp.file.create_new`. It does **not** create `2026-03W`, `2026-01`, `2026-Q1`, or `2026`.
 3. **Task demonstration.** Create `15. Work/04 Tasks/2026-01-15 Example task.md`. Command palette → **Templater: Insert Template** → `manual/task.template.md`. Set `plan: 2026-01-15` and/or `due: 2026-01-15` so Dashboard **Today** and **Due soon** can match; set `gtd: delegation` for **Delegation**. Leave `done: false`.
 4. **Open the day's Dashboard.** Open `10. Time/06 Dashboard/2026-01-15 Dashboard.md`. Core Bases **Tasks** views filter `type == "task"` on those fields. That dashboard is not folder-mapped, so the Daily hook is the single Templater pass.
+5. **Sample Project hub.** Manual templates do not create files or run automatically. Create the folder `15. Work/01 Project/Sample Project`, then create an empty note named `Sample Project` at `15. Work/01 Project/Sample Project/Sample Project.md`. Command palette → **Templater: Insert Template** → `manual/project.template.md`. Review `00. Inbox/me.md`, then paste a wikilink to that reviewed note under Context (do not leave an unresolved placeholder). Fill Objective, Success criteria, Constraints, and Next action. There is no folder template on `15. Work/01 Project`.
+6. **Dated project log.** Create an empty note named `2026-01-15 Sample Project log` at `15. Work/01 Project/Sample Project/2026-01-15 Sample Project log.md`. Command palette → **Templater: Insert Template** → `manual/log.template.md`. Set `project: ["[[Sample Project]]"]` (quoted hub wikilink in the list). Fill Observations, Decision, and Next action. Leave `## Thinking` empty; it is human-only.
+7. **Link a project-owned task.** Create a separate task beside the hub, insert `manual/task.template.md`, and set `project: ["[[Sample Project]]"]` so Dashboard Tasks can show the owning project. The unowned task from step 3 stays in `04 Tasks`. Add the log's wikilink under the hub's Linked logs section. Wikilinks do not create the hub or the log.
 
 Daily notes checkboxes stay on the daily note; Dashboard **Overdue** is a Dataview `TASK` query over `10. Time/01 Daily Notes` and needs Dataview installed.
+
+**Plain Markdown without Templater.** If Templater is not installed, `<% %>` does not run. Do not copy unrendered `<% %>` into a note and treat it as valid Markdown. Write the same YAML keys by hand: `type: project` or `type: log`, `created_by: user`, `authorship: user`, unquoted ISO `date_created` / `date_modified` (for example `2026-01-15`), and on logs `project: []` until you add a quoted hub wikilink. Copy section headings from the template body, not the Templater expressions.
 
 ## Navigation versus creation
 
@@ -112,7 +119,7 @@ Reuse the fields each template already emits. Do not overlay a personal metadata
 - Plain ISO dates are unquoted, for example `date_created: 2026-01-15`.
 - Human-facing stamps remain `created_by: user` and `authorship: user`.
 
-Keep the current keys: Daily (`up`, `week`, `month`, `type`, `created_by`, `authorship`, `tags`); Weekly (`created_by`, `authorship`, `tags`, `month`, `quarter`, `roundup`, `type`); Monthly (`year`, `quarter`, `created_by`, `authorship`, `tags`); Quarterly (`year`, `quarter`, `created_by`, `authorship`, `tags`, `type`); Yearly (`created_by`, `authorship`, `tags`, `type`); Dashboard (`aliases`, `created_by`, `authorship`, `tags`, `type`, `week`); `manual/note.template.md` (`type`, `created_by`, `authorship`, `date_created`, `date_modified`, `tags`, `aliases`); `manual/task.template.md` (`aliases`, `type`, `done`, `gtd`, `project`, `plan`, `due`, `date_created`, `date_modified`, `date_finished`, `created_by`, `authorship`, `tags`).
+Keep the current keys: Daily (`up`, `week`, `month`, `type`, `created_by`, `authorship`, `tags`); Weekly (`created_by`, `authorship`, `tags`, `month`, `quarter`, `roundup`, `type`); Monthly (`year`, `quarter`, `created_by`, `authorship`, `tags`); Quarterly (`year`, `quarter`, `created_by`, `authorship`, `tags`, `type`); Yearly (`created_by`, `authorship`, `tags`, `type`); Dashboard (`aliases`, `created_by`, `authorship`, `tags`, `type`, `week`); `manual/note.template.md` (`type`, `created_by`, `authorship`, `date_created`, `date_modified`, `tags`, `aliases`); `manual/task.template.md` (`aliases`, `type`, `done`, `gtd`, `project`, `plan`, `due`, `date_created`, `date_modified`, `date_finished`, `created_by`, `authorship`, `tags`); `manual/project.template.md` (`type`, `created_by`, `authorship`, `date_created`, `date_modified`, `tags`, `aliases`); `manual/log.template.md` (`type`, `created_by`, `authorship`, `date_created`, `date_modified`, `project`, `tags`, `aliases`).
 
 ## `auto/` — periodic notes
 
@@ -158,7 +165,7 @@ Yearly notes have previous/next and quarter wikilinks only. No embedded Base.
 
 ## `manual/` — on demand
 
-`manual/note.template.md` is the generic new-note template. `manual/task.template.md` is the task note whose fields match Dashboard Tasks. Invoke either from the Templater insert modal. There is no folder template on `15. Work/04 Tasks`.
+`manual/note.template.md` is the generic new-note template. `manual/task.template.md` is the task note whose fields match Dashboard Tasks. `manual/project.template.md` is the project hub (`type: project`, no `status`). `manual/log.template.md` is the dated log (`type: log`, `project: []` for a quoted hub wikilink). Invoke them from the Templater insert modal after you create and name the file. They do not create files, folders, or other notes, and they do not run automatically. There is no folder template on `15. Work/01 Project` or `15. Work/04 Tasks`.
 
 ## Drawings
 

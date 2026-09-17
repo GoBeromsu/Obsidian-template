@@ -25,7 +25,7 @@ Wikilinks are navigation only; they do not create targets. After the Daily templ
 | Path | Role |
 | --- | --- |
 | `auto/` | Periodic files. Folder templates (except Dashboard) are preloaded in Templater `data.json`. |
-| `manual/` | On-demand insert (`note.template.md`, `task.template.md` via the Templater modal) |
+| `manual/` | On-demand insert (`note.template.md`, `task.template.md`, `project.template.md`, `log.template.md` via the Templater modal) |
 
 Only `auto/` and `manual/` are shipped. Do not invent extra Templater categories.
 
@@ -64,6 +64,7 @@ Documented adopter commands (not executed here): command palette **Daily notes: 
 - `auto/Dashboard.template.md` — applied by that Daily hook, not by a folder template.
 - `manual/note.template.md` — generic insert template (`date_created` / `date_modified` via `tp.date.now("YYYY-MM-DD")`).
 - `manual/task.template.md` — task insert whose fields match Dashboard Tasks.
+- `manual/project.template.md` and `manual/log.template.md` — minimal project hub and dated log inserts; no automatic creation or folder mapping. Link the adopter's reviewed `me` context, not a duplicate profile.
 - `../../.obsidian/daily-notes.json` — preloaded Daily notes folder and format; core template empty.
 - `../../.obsidian/plugins/templater-obsidian/data.json` — preloaded Templater folder rules (config, not binaries).
 

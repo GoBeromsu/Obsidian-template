@@ -19,6 +19,8 @@ authorship: agent
   <p>
     <a href="90.%20Settings/01%20Guideline/01.%20Placement%20Guide.ko.md">배치</a>
     ·
+    <a href="90.%20Settings/01%20Guideline/02.%20Writing%20and%20AI.ko.md">글쓰기와 AI</a>
+    ·
     <a href="90.%20Settings/02%20Templates/README.ko.md">템플릿</a>
     ·
     <a href="AGENTS.md">에이전트 가이드라인</a>
@@ -27,7 +29,7 @@ authorship: agent
 
 ## 정리에 쓰는 시간은 줄이고, 생각은 이어가세요
 
-남의 개인 노트 대신, 바로 시작할 수 있는 구조를 가져오세요. 노트마다 제자리를 정하고, 프로젝트를 넘어 아이디어를 연결하고, 연간 목표부터 오늘의 계획까지 이어갑니다. 사람과 에이전트가 같은 배치 규칙을 사용합니다.
+남의 개인 노트 대신, 바로 시작할 수 있는 구조를 가져오세요. ZIP을 받아 **새** 볼트로 폴더를 열고, 일반 마크다운부터 쓰면 됩니다. Git과 커뮤니티 플러그인은 필요할 때까지 선택 사항입니다. 노트마다 제자리를 정하고, 프로젝트를 넘어 아이디어를 연결하고, 연간 목표부터 오늘의 계획까지 이어갑니다. 사람과 에이전트가 같은 배치 규칙을 사용합니다.
 
 - **노트당 하나의 위치.** 누가 썼는지, 어떤 도구가 수집했는지가 아니라 노트가 무엇인지로 둡니다.
 - **PARA와 제텔카스텐.** 프로젝트·영역은 문헌 노트 및 상록 아이디어와 분리합니다.
@@ -47,11 +49,11 @@ authorship: agent
 
 ## 수집에서 작업까지
 
-이것은 배치 모델이며 자동 파이프라인이 아닙니다. 노트를 옮겨 주지 않습니다.
+이것은 배치 모델이며 자동 파이프라인이 아닙니다. 노트를 옮겨 주지 않습니다. 웹의 Gemini는 이 볼트에 자동으로 접근하지 않습니다.
 
 **수집** (`00. Inbox`) → **원본** (`85. Raw`) · **해석** (`30. Literature Notes`) · **아이디어** (`40. Permanent Notes`) · **작업** (`15. Work`)
 
-누가 수집했든 원본은 Raw에 둡니다. 소유자가 있을 때만 프로젝트 또는 영역 아래에 작업을 만듭니다. 첫 노트를 두기 전에 [배치 가이드](90.%20Settings/01%20Guideline/01.%20Placement%20Guide.ko.md)를 읽으십시오.
+누가 수집했든 원본은 Raw에 둡니다. 소유자가 있을 때만 프로젝트 또는 영역 아래에 작업을 만듭니다. 첫 노트를 두기 전에 [배치 가이드](90.%20Settings/01%20Guideline/01.%20Placement%20Guide.ko.md)를 읽으십시오. 공개 AI 채팅으로 글을 쓸 때는 [글쓰기와 AI](90.%20Settings/01%20Guideline/02.%20Writing%20and%20AI.ko.md)를 보십시오.
 
 ## 루트
 
@@ -82,27 +84,46 @@ authorship: agent
 
 ## 시작하기
 
-1. **클론한 뒤 볼트로 열기**
+1. **ZIP 받기 (Git 불필요)**
+
+   GitHub 저장소 페이지에서 **Code → Download ZIP**을 선택합니다. 압축을 풉니다. Obsidian에서 **Open folder as vault**를 고르고, `.obsidian`과 번호 매긴 루트가 들어 있는 압축 해제 폴더를 선택합니다.
+
+   **새** 볼트로 여십시오. 이미 있는 볼트에 이 파일들을 합치지 마십시오.
+
+   숨김 폴더 `.obsidian`은 그대로 두십시오. 숨김 파일을 표시해 확인하고, 누락되었다면 점(.)으로 시작하는 폴더를 보존하는 도구로 ZIP을 다시 푸십시오. 그 폴더는 휴대용 설정이며 플러그인 바이너리가 아닙니다.
+
+2. **선택: Git으로 클론**
 
    ```sh
    git clone https://github.com/GoBeromsu/Obsidian-template.git
    ```
 
-   클론한 폴더를 Obsidian에서 새 볼트로 엽니다. 디렉터리를 복사해도 같습니다.
+   클론한 폴더를 같은 방식으로 새 볼트로 엽니다. 디렉터리를 복사해도 같습니다.
 
-2. **템플릿에 필요한 것 설치**
+3. **먼저 마크다운을 쓰고, 플러그인은 필요할 때 설치**
 
-   Obsidian에서 커뮤니티 플러그인은 **설정 → 커뮤니티 플러그인**으로 설치합니다. `auto/`와 `manual/` 템플릿을 실행하려면 [Templater](https://github.com/SilentVoid13/Templater)가 필요합니다. 대시보드 Overdue 쿼리를 쓰려면 Dataview를 설치합니다. `community-plugins.json`의 ID는 설치를 대신하지 않습니다.
+   일반 마크다운 수업은 커뮤니티 플러그인 없이 됩니다. 커뮤니티 플러그인은 필요할 때만 **설정 → 커뮤니티 플러그인**에서 설치합니다. `auto/` 폴더 템플릿을 적용하거나 `manual/` 템플릿을 삽입하려면 [Templater](https://github.com/SilentVoid13/Templater)가 필요합니다. 대시보드 Overdue 쿼리를 쓰려면 Dataview를 설치합니다. `community-plugins.json`의 ID는 설치를 대신하지 않습니다.
 
-3. **엔진 설정 확인**
+4. **엔진 설정 확인 (템플릿을 쓸 때)**
 
    코어 Daily notes는 켜져 있습니다. 일·주·월·분기·연용 Templater 폴더 템플릿은 `data.json`으로 포함되어 있으며, 플러그인 바이너리가 아닙니다. [템플릿](90.%20Settings/02%20Templates/README.ko.md) **엔진 설정**을 따르십시오. 코어 Bases는 이미 켜져 있습니다.
 
-4. **수집한 뒤 배치**
+5. **수집한 뒤 배치**
 
    먼저 [배치 가이드](90.%20Settings/01%20Guideline/01.%20Placement%20Guide.ko.md)를 읽습니다. 미분류 캡처는 `00. Inbox`에 둡니다. 노트의 소유자가 있으면 `15. Work/01 Project` 또는 `15. Work/02 Area` 아래에 작업을 만듭니다. 시스템 파일은 `90. Settings`에 둡니다.
 
 이 단계는 설정 안내입니다. 주기 노트 생성, Bases 보기, 테마 모양이 Obsidian에서 끝까지 검증되었다는 주장이 아닙니다.
+
+## 첫 수업
+
+볼트를 연 뒤의 짧은 경로입니다. 자세한 내용: [글쓰기와 AI](90.%20Settings/01%20Guideline/02.%20Writing%20and%20AI.ko.md).
+
+1. [`00. Inbox/me.md`](00.%20Inbox/me.md)를 편집합니다. 한 장의 한·영 기입 워크시트이며, 정식 `me` 노트는 이것 하나입니다. 일반적인 사실만 적으십시오. 비밀, 자격 증명, 기기 경로는 넣지 마십시오.
+2. 웹의 Gemini에는 **정제된 발췌만** 공유합니다. 텍스트는 직접 붙여 넣습니다. Gemini는 이 볼트에 자동으로 접근하지 않습니다.
+3. Gemini에게 확인 질문을 **정확히 세 개** 하고 기다리도록 요청합니다. 직접 답한 뒤 초안을 요청합니다. 초안을 검토하고 **채택한 답만** `me.md`의 해당 섹션에 직접 저장합니다.
+4. 프로젝트 폴더 `15. Work/01 Project/<Name>/`를 만듭니다. 그 안에 빈 허브 노트와 빈 날짜 로그를 만든 다음, **Templater: Insert Template**으로 [`manual/project.template.md`](90.%20Settings/02%20Templates/manual/project.template.md)와 [`manual/log.template.md`](90.%20Settings/02%20Templates/manual/log.template.md)를 넣습니다. 이 파일들에는 폴더 매핑이 없습니다. 일반 예: `15. Work/01 Project/Sample Project/Sample Project.md`와 `15. Work/01 Project/Sample Project/2026-01-15 kickoff.md`. 삽입 후 로그의 `project` 필드를 `["[[Sample Project]]"]`로 둡니다. 허브에서 `[[me]]`와 로그를 연결합니다. Templater 없이 진행하려면 [일반 Markdown 대안](90.%20Settings/02%20Templates/README.ko.md)을 따릅니다.
+
+채워 넣은 `me.md`와 프로젝트 노트는 비공개로 취급하십시오. **Git이나 공유에서 자동 제외되지 않습니다.** 공개 저장소에 올리지 마십시오.
 
 ## 에이전트 가이드라인
 

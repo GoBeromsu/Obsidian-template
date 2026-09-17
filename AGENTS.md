@@ -4,7 +4,7 @@
 
 This directory is a portable Obsidian vault template. It ships a 10-root skeleton, Templater files (including Daily and `manual/task.template.md`), Excalidraw drawings under `90. Settings/07 Excalidraw`, and portable `.obsidian` JSON (including Daily notes enablement and Templater `data.json`) without personal notes, credentials, plugin caches, plugin or theme binaries, or machine-specific state. Faith (`60. Saint`) and publication (`25. Digital Garden`) roots are intentionally absent. There is no Handbook folder.
 
-Human start, placement, and template guides ship as English/Korean pairs. The two languages are equivalent translations of one contract, not two note homes. Neither language outranks the other. When those instructions change, update both files.
+Human start, placement, writing/AI, and template guides ship as English/Korean pairs. The two languages are equivalent translations of one contract, not two note homes. Neither language outranks the other. When those instructions change, update both files.
 
 Nearest nested agent contracts: `90. Settings/AGENTS.md` and `90. Settings/02 Templates/AGENTS.md`. Do not add `AGENTS.md` to empty skeleton folders.
 
@@ -14,7 +14,9 @@ Capture starts in `00. Inbox` and is filed with the placement guide by ownership
 
 Periodic templates under `90. Settings/02 Templates/auto/` insert navigation wikilinks and, where present, embedded Bases (and one Dataview) views. Those links and views do not create missing notes. The Daily template is the only shipped creator: after it runs, it may add dashboard files for yesterday, today, and tomorrow. It does not cascade into weekly, monthly, quarterly, or yearly notes.
 
-`auto/` templates are for periodic Time notes (folder-template / insert-on-create). `manual/` is on-demand insert (`note.template.md`, `task.template.md`). Title formats, engines, and creation rules live in `90. Settings/02 Templates/AGENTS.md` and the bilingual template READMEs.
+`auto/` templates are for periodic Time notes (folder-template / insert-on-create). `manual/` is on-demand insert (`note.template.md`, `task.template.md`, `project.template.md`, `log.template.md`). Title formats, engines, and creation rules live in `90. Settings/02 Templates/AGENTS.md` and the bilingual template READMEs.
+
+The beginner lecture starts with the generic bilingual `00. Inbox/me.md` worksheet, a three-question Gemini interview using sanitized excerpts, and a project hub with a dated log. The worksheet is not a personal biography or an AI integration. Keep filled answers in the adopter's vault; `## Thinking` stays human-only.
 
 ## Key Directories
 
@@ -53,6 +55,8 @@ Open a copied or cloned template directory as an Obsidian vault. No application 
 - `README.md` and `README.ko.md` — equivalent start guides (scope, ten roots, shipped versus installed, first-use steps).
 - `90. Settings/AGENTS.md` — settings-layer agent contract.
 - `90. Settings/01 Guideline/01. Placement Guide.md` and `01. Placement Guide.ko.md` — equivalent placement contracts.
+- `90. Settings/01 Guideline/02. Writing and AI.md` and `02. Writing and AI.ko.md` — equivalent writing, minimal properties, privacy, and AI-boundary guidance.
+- `00. Inbox/me.md` — single bilingual context worksheet; agent-authored scaffold, not a human-stamped Templater file.
 - `90. Settings/02 Templates/AGENTS.md` — template-layer agent contract.
 - `90. Settings/02 Templates/README.md` and `README.ko.md` — equivalent Templater and core Daily notes setup (**Engine setup**).
 - `90. Settings/02 Templates/auto/Daily Note.template.md` — shipped daily template; may create dashboards only.

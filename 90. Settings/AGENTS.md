@@ -22,7 +22,7 @@ Do not add Handbook folders, extra Templater categories, or nested `AGENTS.md` u
 
 | Path | Role |
 | --- | --- |
-| `01 Guideline/` | Placement Guide pair (`01. Placement Guide.md`, `01. Placement Guide.ko.md`) |
+| `01 Guideline/` | Placement Guide and Writing and AI pairs (English/Korean) |
 | `02 Templates/` | Templater root: `auto/`, `manual/`, bilingual README, nested `AGENTS.md` |
 | `03 Home/` | Empty home placeholder |
 | `04 Index/` | Empty index placeholder |
@@ -47,6 +47,7 @@ No Settings-specific build, test, CLI-init, or git-init command exists; none is 
 - `../AGENTS.md` — template-root agent contract and ten-root map.
 - `../README.md` and `../README.ko.md` — equivalent start guides.
 - `01 Guideline/01. Placement Guide.md` and `01. Placement Guide.ko.md` — equivalent placement contracts.
+- `01 Guideline/02. Writing and AI.md` and `02. Writing and AI.ko.md` — equivalent public writing, properties, Gemini interview, and AI-boundary guidance; no private automation or schema.
 - `02 Templates/AGENTS.md` — auto/manual, engines, dates, Dashboard hook.
 - `02 Templates/README.md` and `README.ko.md` — equivalent Templater and Daily notes setup (preloaded JSON, install still required).
 - `02 Templates/auto/Daily Note.template.md` — Daily creator; may create dashboards only.

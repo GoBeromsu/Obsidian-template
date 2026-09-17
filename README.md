@@ -14,6 +14,8 @@
   <p>
     <a href="90.%20Settings/01%20Guideline/01.%20Placement%20Guide.md">Placement</a>
     ·
+    <a href="90.%20Settings/01%20Guideline/02.%20Writing%20and%20AI.md">Writing and AI</a>
+    ·
     <a href="90.%20Settings/02%20Templates/README.md">Templates</a>
     ·
     <a href="AGENTS.md">Agent guidelines</a>
@@ -22,7 +24,7 @@
 
 ## Less organizing. More connecting.
 
-Start with a working structure, not someone else's personal notes. Give each note one canonical home, connect ideas across projects, and plan from year to day. Humans and agents share the same placement rules.
+Start with a working structure, not someone else's personal notes. Download the ZIP, open the folder as a **new** vault, and write ordinary Markdown — Git and community plugins are optional until you need them. Give each note one canonical home, connect ideas across projects, and plan from year to day. Humans and agents share the same placement rules.
 
 - **One home per note.** File by what the note is, not who wrote it or which tool captured it.
 - **PARA plus Zettelkasten.** Projects and areas stay separate from literature notes and evergreen ideas.
@@ -42,11 +44,11 @@ Start with a working structure, not someone else's personal notes. Give each not
 
 ## Capture to work
 
-This is a filing model, not an automatic pipeline. Nothing here moves notes for you.
+This is a filing model, not an automatic pipeline. Nothing here moves notes for you. Gemini on the web does not get automatic access to this vault.
 
 **Capture** (`00. Inbox`) → **original** (`85. Raw`) · **interpretation** (`30. Literature Notes`) · **idea** (`40. Permanent Notes`) · **work** (`15. Work`)
 
-Keep captured originals in Raw regardless of collector. Create work under a project or area only when the note has an owner. Read the [Placement Guide](90.%20Settings/01%20Guideline/01.%20Placement%20Guide.md) before filing the first note.
+Keep captured originals in Raw regardless of collector. Create work under a project or area only when the note has an owner. Read the [Placement Guide](90.%20Settings/01%20Guideline/01.%20Placement%20Guide.md) before filing the first note. For writing with a public AI chat, see [Writing and AI](90.%20Settings/01%20Guideline/02.%20Writing%20and%20AI.md).
 
 ## Roots
 
@@ -77,27 +79,46 @@ Task notes use `manual/task.template.md` fields `type`, `done`, `gtd`, `project`
 
 ## Quick start
 
-1. **Clone and open as a vault**
+1. **Download ZIP (no Git required)**
+
+   On the GitHub repository page, choose **Code → Download ZIP**. Extract the archive. In Obsidian, choose **Open folder as vault** and select the extracted folder that contains `.obsidian` and the numbered roots.
+
+   Open it as a **new** vault. Do not merge these files into an existing vault.
+
+   Keep the hidden `.obsidian` folder. Show hidden files to check it; if it was omitted, extract the ZIP again with a tool that retains dotfolders. That folder is portable settings, not plugin binaries.
+
+2. **Optional: clone with Git**
 
    ```sh
    git clone https://github.com/GoBeromsu/Obsidian-template.git
    ```
 
-   Open the cloned folder as a new vault in Obsidian. Copying the directory works the same way.
+   Open the cloned folder as a new vault the same way. Copying the directory works the same way.
 
-2. **Install what the templates need**
+3. **Write Markdown first; install plugins when you need them**
 
-   In Obsidian, install community plugins from **Settings → Community plugins**. [Templater](https://github.com/SilentVoid13/Templater) is required for `auto/` and `manual/` templates to run. Install Dataview if you want the Dashboard Overdue query. IDs in `community-plugins.json` are not installations.
+   A plain Markdown lesson works with no community plugins. Install community plugins from **Settings → Community plugins** only when you need them. [Templater](https://github.com/SilentVoid13/Templater) is required when using the `auto/` folder templates or inserting `manual/` templates. Install Dataview if you want the Dashboard Overdue query. IDs in `community-plugins.json` are not installations.
 
-3. **Confirm engine setup**
+4. **Confirm engine setup (when using templates)**
 
    Core Daily notes is enabled. Templater folder templates for daily, weekly, monthly, quarterly, and yearly notes ship as `data.json` (not plugin binaries). Follow [Templates](90.%20Settings/02%20Templates/README.md) **Engine setup**. Core Bases is already enabled.
 
-4. **Capture, then file**
+5. **Capture, then file**
 
    Read the [Placement Guide](90.%20Settings/01%20Guideline/01.%20Placement%20Guide.md) first. Drop unsorted capture into `00. Inbox`. Create work under `15. Work/01 Project` or `15. Work/02 Area` when a note has an owner. Keep system files in `90. Settings`.
 
 These steps are setup instructions, not a claim that periodic creation, Bases views, or theme appearance were end-to-end verified in Obsidian.
+
+## First lesson
+
+One short path after the vault is open. Details: [Writing and AI](90.%20Settings/01%20Guideline/02.%20Writing%20and%20AI.md).
+
+1. Edit [`00. Inbox/me.md`](00.%20Inbox/me.md). It is one bilingual fill-in worksheet and the only canonical `me` note. Use generic facts. Do not put secrets, credentials, or machine paths in it.
+2. Share **only sanitized excerpts** with Gemini on the web. Paste text yourself. Gemini does not get automatic access to this vault.
+3. Ask Gemini to ask you **exactly three** clarifying questions and wait. Answer them, then request a draft. Review it yourself and save **only accepted** answers into the relevant `me.md` sections by hand.
+4. Create a project folder `15. Work/01 Project/<Name>/`. Add an empty hub note and an empty dated log in that folder, then use **Templater: Insert Template** with [`manual/project.template.md`](90.%20Settings/02%20Templates/manual/project.template.md) and [`manual/log.template.md`](90.%20Settings/02%20Templates/manual/log.template.md). There is no folder mapping for these files. Generic example: `15. Work/01 Project/Sample Project/Sample Project.md` and `15. Work/01 Project/Sample Project/2026-01-15 kickoff.md`. After insert, set the log `project` field to `["[[Sample Project]]"]`. Link `[[me]]` from the hub and the log from the hub. Without Templater, use the [plain Markdown alternative](90.%20Settings/02%20Templates/README.md).
+
+Treat filled `me.md` and project notes as private. They are **not automatically excluded from Git or sharing**; do not push them to a public repository.
 
 ## Agent guidelines
 

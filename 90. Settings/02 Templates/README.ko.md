@@ -31,6 +31,8 @@ authorship: agent
 - `auto/Dashboard.template.md`
 - `manual/note.template.md`
 - `manual/task.template.md`
+- `manual/project.template.md`
+- `manual/log.template.md`
 
 ## 엔진 설정 (Daily notes와 Templater 폴더 규칙은 미리 로드됨)
 
@@ -77,8 +79,13 @@ authorship: agent
    `tp.file.create_new`로 `auto/Dashboard.template.md`를 사용합니다. `2026-03W`, `2026-01`, `2026-Q1`, `2026`은 **만들지 않습니다**.
 3. **할 일 시연.** `15. Work/04 Tasks/2026-01-15 Example task.md`를 만듭니다. 명령 팔레트 → **Templater: Insert Template** → `manual/task.template.md`. Dashboard **Today**와 **Due soon**에 걸리도록 `plan: 2026-01-15` 그리고/또는 `due: 2026-01-15`를 넣고, **Delegation**에는 `gtd: delegation`을 넣습니다. `done: false`로 둡니다.
 4. **그날 대시보드 열기.** `10. Time/06 Dashboard/2026-01-15 Dashboard.md`를 엽니다. 핵심 Bases **Tasks** 뷰가 `type == "task"`와 그 필드로 거릅니다. 그 대시보드는 폴더 매핑되지 않으므로 Daily 훅이 Templater를 한 번만 적용합니다.
+5. **Sample Project 허브.** 수동 템플릿은 파일을 만들지 않고 자동으로 실행되지 않습니다. 폴더 `15. Work/01 Project/Sample Project`를 만든 뒤, 빈 노트 이름을 `Sample Project`로 하여 `15. Work/01 Project/Sample Project/Sample Project.md`를 만듭니다. 명령 팔레트 → **Templater: Insert Template** → `manual/project.template.md`. `00. Inbox/me.md`를 검토한 뒤 Context에 그 노트 위키링크를 붙이십시오 (미해결 자리표시를 남기지 마십시오). Objective, Success criteria, Constraints, Next action을 채웁니다. `15. Work/01 Project`에는 폴더 템플릿이 없습니다.
+6. **날짜가 있는 프로젝트 로그.** 빈 노트 이름을 `2026-01-15 Sample Project log`로 하여 `15. Work/01 Project/Sample Project/2026-01-15 Sample Project log.md`를 만듭니다. 명령 팔레트 → **Templater: Insert Template** → `manual/log.template.md`. `project: ["[[Sample Project]]"]`로 둡니다 (목록 안의 인용된 허브 위키링크). Observations, Decision, Next action을 채웁니다. `## Thinking`은 비워 두십시오. 사람 전용입니다.
+7. **프로젝트 소유 할 일 연결.** 허브 옆에 별도 할 일을 만들고 `manual/task.template.md`를 삽입한 뒤 `project: ["[[Sample Project]]"]`로 두어 Dashboard Tasks가 소유 프로젝트를 보이게 합니다. 3단계의 소유 프로젝트 없는 할 일은 `04 Tasks`에 둡니다. 허브의 Linked logs 섹션에 로그의 위키링크를 추가합니다. 위키링크는 허브나 로그를 만들지 않습니다.
 
 일일 노트의 체크박스는 일일 노트에 남깁니다. Dashboard **Overdue**는 `10. Time/01 Daily Notes`에 대한 Dataview `TASK` 질의이며 Dataview 설치가 필요합니다.
+
+**Templater 없이 일반 마크다운.** Templater가 없으면 `<% %>`는 실행되지 않습니다. 렌더되지 않은 `<% %>`를 노트에 복사해 유효한 마크다운처럼 쓰지 마십시오. 같은 YAML 키를 손으로 쓰십시오: `type: project` 또는 `type: log`, `created_by: user`, `authorship: user`, 인용 없는 ISO `date_created` / `date_modified` (예: `2026-01-15`), 로그는 인용된 허브 위키링크를 넣을 때까지 `project: []`. 본문에서는 Templater 식이 아니라 템플릿의 절 제목을 복사하십시오.
 
 ## 탐색과 생성
 
@@ -112,7 +119,7 @@ authorship: agent
 - 일반 ISO 날짜는 인용하지 않습니다. 예: `date_created: 2026-01-15`.
 - 사람용 스탬프는 `created_by: user`, `authorship: user`로 유지합니다.
 
-현재 키를 유지합니다. Daily (`up`, `week`, `month`, `type`, `created_by`, `authorship`, `tags`); Weekly (`created_by`, `authorship`, `tags`, `month`, `quarter`, `roundup`, `type`); Monthly (`year`, `quarter`, `created_by`, `authorship`, `tags`); Quarterly (`year`, `quarter`, `created_by`, `authorship`, `tags`, `type`); Yearly (`created_by`, `authorship`, `tags`, `type`); Dashboard (`aliases`, `created_by`, `authorship`, `tags`, `type`, `week`); `manual/note.template.md` (`type`, `created_by`, `authorship`, `date_created`, `date_modified`, `tags`, `aliases`); `manual/task.template.md` (`aliases`, `type`, `done`, `gtd`, `project`, `plan`, `due`, `date_created`, `date_modified`, `date_finished`, `created_by`, `authorship`, `tags`).
+현재 키를 유지합니다. Daily (`up`, `week`, `month`, `type`, `created_by`, `authorship`, `tags`); Weekly (`created_by`, `authorship`, `tags`, `month`, `quarter`, `roundup`, `type`); Monthly (`year`, `quarter`, `created_by`, `authorship`, `tags`); Quarterly (`year`, `quarter`, `created_by`, `authorship`, `tags`, `type`); Yearly (`created_by`, `authorship`, `tags`, `type`); Dashboard (`aliases`, `created_by`, `authorship`, `tags`, `type`, `week`); `manual/note.template.md` (`type`, `created_by`, `authorship`, `date_created`, `date_modified`, `tags`, `aliases`); `manual/task.template.md` (`aliases`, `type`, `done`, `gtd`, `project`, `plan`, `due`, `date_created`, `date_modified`, `date_finished`, `created_by`, `authorship`, `tags`); `manual/project.template.md` (`type`, `created_by`, `authorship`, `date_created`, `date_modified`, `tags`, `aliases`); `manual/log.template.md` (`type`, `created_by`, `authorship`, `date_created`, `date_modified`, `project`, `tags`, `aliases`).
 
 ## `auto/` — 주기 노트
 
@@ -158,7 +165,7 @@ Dashboard를 제외한 모든 행의 Templater 폴더 템플릿은 미리 로드
 
 ## `manual/` — 필요할 때
 
-`manual/note.template.md`는 일반 새 노트 템플릿입니다. `manual/task.template.md`는 Dashboard Tasks와 필드가 맞는 할 일 노트입니다. 둘 다 Templater 삽입 모달에서 호출합니다. `15. Work/04 Tasks`에는 폴더 템플릿이 없습니다.
+`manual/note.template.md`는 일반 새 노트 템플릿입니다. `manual/task.template.md`는 Dashboard Tasks와 필드가 맞는 할 일 노트입니다. `manual/project.template.md`는 프로젝트 허브입니다 (`type: project`, `status` 없음). `manual/log.template.md`는 날짜가 있는 로그입니다 (`type: log`, 인용된 허브 위키링크용 `project: []`). 파일을 만들고 이름을 지은 뒤 Templater 삽입 모달에서 호출합니다. 파일·폴더·다른 노트를 만들지 않고 자동으로 실행되지 않습니다. `15. Work/01 Project`와 `15. Work/04 Tasks`에는 폴더 템플릿이 없습니다.
 
 ## 그림
 
