@@ -113,10 +113,11 @@ These steps are setup instructions, not a claim that periodic creation, Bases vi
 
 One short path after the vault is open. Details: [Writing and AI](90.%20Settings/01%20Guideline/02.%20Writing%20and%20AI.md).
 
-1. Edit [`00. Inbox/me.md`](00.%20Inbox/me.md). It is one bilingual fill-in worksheet and the only canonical `me` note. Use generic facts. Do not put secrets, credentials, or machine paths in it.
-2. Share **only sanitized excerpts** with Gemini on the web. Paste text yourself. Gemini does not get automatic access to this vault.
-3. Ask Gemini to ask you **exactly three** clarifying questions and wait. Answer them, then request a draft. Review it yourself and save **only accepted** answers into the relevant `me.md` sections by hand.
-4. Create a project folder `15. Work/01 Project/<Name>/`. Add an empty hub note and an empty dated log in that folder, then use **Templater: Insert Template** with [`manual/project.template.md`](90.%20Settings/02%20Templates/manual/project.template.md) and [`manual/log.template.md`](90.%20Settings/02%20Templates/manual/log.template.md). There is no folder mapping for these files. Generic example: `15. Work/01 Project/Sample Project/Sample Project.md` and `15. Work/01 Project/Sample Project/2026-01-15 kickoff.md`. After insert, set the log `project` field to `["[[Sample Project]]"]`. Link `[[me]]` from the hub and the log from the hub. Without Templater, use the [plain Markdown alternative](90.%20Settings/02%20Templates/README.md).
+1. Before writing, read [Beginner syntax](90.%20Settings/01%20Guideline/02.%20Writing%20and%20AI.md#beginner-syntax): six Markdown basics and a tiny example.
+2. Edit [`00. Inbox/me.md`](00.%20Inbox/me.md). It is one bilingual fill-in worksheet and the only canonical `me` note. Use generic facts. Do not put secrets, credentials, or machine paths in it.
+3. Share **only sanitized excerpts** with Gemini on the web. Paste text yourself. Gemini does not get automatic access to this vault.
+4. Ask Gemini to ask you **exactly three** clarifying questions and wait. Answer them, then request a draft. Review it yourself and save **only accepted** answers into the relevant `me.md` sections by hand.
+5. Create a project folder `15. Work/01 Project/<Name>/`. Add an empty hub note and an empty dated log in that folder, then use **Templater: Insert Template** with [`manual/project.template.md`](90.%20Settings/02%20Templates/manual/project.template.md) and [`manual/log.template.md`](90.%20Settings/02%20Templates/manual/log.template.md). There is no folder mapping for these files. Generic example: `15. Work/01 Project/Sample Project/Sample Project.md` and `15. Work/01 Project/Sample Project/2026-01-15 kickoff.md`. After insert, set the log `project` field to `["[[Sample Project]]"]`. Link `[[me]]` from the hub and the log from the hub. Without Templater, use the [plain Markdown alternative](90.%20Settings/02%20Templates/README.md).
 
 Treat filled `me.md` and project notes as private. They are **not automatically excluded from Git or sharing**; do not push them to a public repository.
 
