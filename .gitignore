@@ -6,11 +6,21 @@
 *.log
 *.bak
 .gjc/
-.claude/
 .codex/
 .omc/
 .oms/
 node_modules/
+
+# Ship the vendored Agent Skills, but no local agent state.
+# The directories are un-excluded first: git never descends into an excluded
+# directory, so an allow-list under one is unreachable. This also overrides a
+# global core.excludesFile that ignores .agents/ or .claude/ machine-wide.
+!.agents/
+.agents/*
+!.agents/skills/
+!.claude/
+.claude/*
+!.claude/skills/
 
 # Ship only the reviewed portable Obsidian settings and snippets.
 .obsidian/*

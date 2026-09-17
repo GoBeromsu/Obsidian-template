@@ -1,0 +1,37 @@
+# doctor plugin registry
+# Keyed by plugin-id (string in manifest.json).
+# Rules:
+#   - version_seen: updated on every run where installed version is newer than recorded.
+#   - key_patterns: append-only; entries are never removed unless the API is gone.
+#   - antipatterns and known_regressions: append-only; never blank these lists.
+#   - New plugins are appended as new top-level keys; existing keys are never replaced wholesale.
+# This file ships as a seed registry. Append entries as you diagnose plugins; keep host- or
+# vault-specific note/template paths out of it — cite the plugin behavior, not a private file.
+
+templater-obsidian:
+  repo: https://github.com/silentvoid13/Templater
+  docs: https://silentvoid13.github.io/Templater/
+  version_seen: 2.19.3
+  key_patterns:
+    entry_block: "<%* ... %>"
+    output_append: "tR +="
+    prompt: "await tp.system.prompt('label', 'default')"
+    suggester: "await tp.system.suggester(labelFor, items, false, placeholder, undefined, SENTINEL)"
+    move_file: "await tp.file.move('folder/NewName')"
+    rename_file: "await tp.file.rename('NewName')"
+    current_title: "tp.file.title"
+  antipatterns:
+    - "<% bareVar %>  # a bare variable is undefined in Templater's JS scope → ReferenceError; rewrite to a <%* ... %> entry block with await tp.system.prompt() and tR +="
+  known_regressions:
+    - version: "2.19.1"
+      id: suggester-empty
+      note: "SuggesterModal.onOpen() skips super.onOpen(); the list renders empty unless default_value triggers the input event."
+      fix: "Pass a SENTINEL symbol as default_value whose label is the empty string ('') to force the initial render without pre-filling the search box. The sentinel is never in items so it never appears as a selectable row. Example: const SENTINEL = Symbol('suggester-bootstrap'); await tp.system.suggester(labelFor, candidates, false, 'placeholder', undefined, SENTINEL)."
+
+notebook-navigator:
+  repo: https://github.com/johansan/notebook-navigator
+  docs: https://notebooknavigator.com/docs.html
+  version_seen: null
+  key_patterns: {}
+  antipatterns: []
+  known_regressions: []

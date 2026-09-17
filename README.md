@@ -18,6 +18,8 @@
     ·
     <a href="90.%20Settings/02%20Templates/README.md">Templates</a>
     ·
+    <a href="90.%20Settings/01%20Guideline/03.%20Agent%20Skills.md">Agent Skills</a>
+    ·
     <a href="AGENTS.md">Agent guidelines</a>
   </p>
 </div>
@@ -40,6 +42,7 @@ Start with a working structure, not someone else's personal notes. Download the 
 | Periodic planning | Templater `auto/` notes for year, quarter, month, week, day, and dashboards |
 | Agent-readable rules | Nested `AGENTS.md` at vault root, Settings, and Templates |
 | Embedded views | Core Bases tables in period templates; Dashboard Overdue needs Dataview |
+| Agent Skills | One vendored `obsidian` skill; works in Claude Code, Codex, and Antigravity |
 | Empty placeholders | Home, indexes, and standalone Bases folders are yours to fill |
 
 ## Capture to work
