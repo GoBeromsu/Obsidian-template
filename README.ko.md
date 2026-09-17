@@ -119,7 +119,7 @@ authorship: agent
 볼트를 연 뒤의 짧은 경로입니다. 자세한 내용: [글쓰기와 AI](90.%20Settings/01%20Guideline/02.%20Writing%20and%20AI.ko.md).
 
 1. 쓰기 전에 [초보 문법](90.%20Settings/01%20Guideline/02.%20Writing%20and%20AI.ko.md#초보-문법)에서 Markdown 기본 여섯 가지와 짧은 예시를 읽습니다.
-2. [`00. Inbox/me.md`](00.%20Inbox/me.md)를 편집합니다. 영어 `##` 제목으로 된 한 장의 기입 워크시트이며(답은 어느 언어로든 가능), 정식 `me` 노트는 이것 하나입니다. 일반적인 사실만 적으십시오. 비밀, 자격 증명, 기기 경로는 넣지 마십시오.
+2. 볼트 루트의 [`me.md`](me.md)를 편집합니다. 영어 `##` 제목으로 된 한 장의 기입 워크시트이며(답은 어느 언어로든 가능), 정식 `me` 노트는 이것 하나입니다. 일반적인 사실만 적으십시오. 비밀, 자격 증명, 기기 경로는 넣지 마십시오.
 3. 웹의 Gemini에는 **정제된 발췌만** 공유합니다. 텍스트는 직접 붙여 넣습니다. Gemini는 이 볼트에 자동으로 접근하지 않습니다.
 4. Gemini에게 확인 질문을 **정확히 세 개** 하고 기다리도록 요청합니다. 직접 답한 뒤 초안을 요청합니다. 초안을 검토하고 **채택한 답만** `me.md`의 해당 섹션에 직접 저장합니다.
 5. 프로젝트 폴더 `15. Work/01 Project/<Name>/`를 만듭니다. 그 안에 빈 허브 노트와 빈 날짜 로그를 만든 다음, **Templater: Insert Template**으로 [`manual/project.template.md`](90.%20Settings/02%20Templates/manual/project.template.md)와 [`manual/log.template.md`](90.%20Settings/02%20Templates/manual/log.template.md)를 넣습니다. 이 파일들에는 폴더 매핑이 없습니다. 일반 예: `15. Work/01 Project/Sample Project/Sample Project.md`와 `15. Work/01 Project/Sample Project/2026-01-15 kickoff.md`. 삽입 후 로그의 `project` 필드를 `["[[Sample Project]]"]`로 둡니다. 허브에서 `[[me]]`와 로그를 연결합니다. Templater 없이 진행하려면 [일반 Markdown 대안](90.%20Settings/02%20Templates/README.ko.md)을 따릅니다.
