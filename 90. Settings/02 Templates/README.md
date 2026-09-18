@@ -33,6 +33,8 @@ Every shipped template file uses the `*.template.md` suffix:
 - `manual/task.template.md`
 - `manual/project.template.md`
 - `manual/log.template.md`
+- `manual/video.template.md`
+- `manual/book.template.md`
 
 ## Engine setup (Daily notes and Templater folders are preloaded)
 
@@ -165,7 +167,7 @@ Yearly notes have previous/next and quarter wikilinks only. No embedded Base.
 
 ## `manual/` — on demand
 
-`manual/note.template.md` is the generic new-note template. `manual/task.template.md` is the task note whose fields match Dashboard Tasks. `manual/project.template.md` is the project hub (`type: project`, no `status`). `manual/log.template.md` is the dated log (`type: log`, `project: []` for a quoted hub wikilink). Invoke them from the Templater insert modal after you create and name the file. They do not create files, folders, or other notes, and they do not run automatically. There is no folder template on `15. Work/01 Project` or `15. Work/04 Tasks`.
+`manual/note.template.md` is the generic new-note template. `manual/task.template.md` is the task note whose fields match Dashboard Tasks. `manual/project.template.md` is the project hub (`type: project`, no `status`). `manual/log.template.md` is the dated log (`type: log`, `project: []` for a quoted hub wikilink). `manual/video.template.md` (`type: video`; `author`, `source_url`, `date_published`, `image`) and `manual/book.template.md` (`type: book`; `author`, `status`, `total_page`, `cover_url`) are source-note templates whose property names are read by `90. Settings/05 Bases/Video.base` and `Books.base`. Keep the property names identical on both sides; a renamed property leaves the Base view empty. Invoke them from the Templater insert modal after you create and name the file. They do not create files, folders, or other notes, and they do not run automatically. There is no folder template on `15. Work/01 Project` or `15. Work/04 Tasks`.
 
 ## Drawings
 

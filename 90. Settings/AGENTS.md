@@ -14,7 +14,7 @@ Human guides in this tree are English/Korean pairs: equivalent translations of o
 
 ## Architecture & Data Flow
 
-Placement SSOT is the bilingual Placement Guide under `01 Guideline/`. Templates live under `02 Templates/` (`auto/` periodic, `manual/` on-demand). Standalone home, index, and Bases folders ship empty; periodic views that exist are embedded in templates. Drawings live under `07 Excalidraw/`. `.obsidian/` is a sibling of this folder at vault root, not inside it.
+Placement SSOT is the bilingual Placement Guide under `01 Guideline/`. Templates live under `02 Templates/` (`auto/` periodic, `manual/` on-demand). Standalone home and index folders ship empty. `05 Bases/` ships two standalone example Bases (`Video.base`, `Books.base`) that read properties stamped by `02 Templates/manual/video.template.md` and `book.template.md`; periodic views are embedded in templates. Drawings live under `07 Excalidraw/`. `.obsidian/` is a sibling of this folder at vault root, not inside it.
 
 Do not add Handbook folders, extra Templater categories, or nested `AGENTS.md` under `03 Home/`, `04 Index/`, `05 Bases/`, or `07 Excalidraw/`. Child agent contract: `02 Templates/AGENTS.md`.
 
@@ -26,7 +26,7 @@ Do not add Handbook folders, extra Templater categories, or nested `AGENTS.md` u
 | `02 Templates/` | Templater root: `auto/`, `manual/`, bilingual README, nested `AGENTS.md` |
 | `03 Home/` | Empty home placeholder |
 | `04 Index/` | Empty index placeholder |
-| `05 Bases/` | Empty standalone Bases placeholder |
+| `05 Bases/` | Standalone example Bases: `Video.base`, `Books.base` |
 | `07 Excalidraw/` | Drawings and Excalidraw assets (number `07` avoids Handbook `06`; no Handbook in this template) |
 
 ## Development Commands
@@ -64,4 +64,4 @@ Core Bases is on. Core Daily notes is on; do not assume a core Daily template. T
 
 ## Testing & QA
 
-Confirm inheritance to `../AGENTS.md`, bilingual pairs updated together, no duplicated root taxonomy, empty `03 Home/` / `04 Index/` / `05 Bases/`, drawings root `07 Excalidraw/` with no Handbook path and no stale Collections Excalidraw route, no extra `AGENTS.md` in Home/Index/Bases/Excalidraw, preserved provenance and `## Thinking`, unchanged template/config files unless assigned, config-versus-binary distinction for `.obsidian/plugins/`, and no claim that plugin IDs, `data.json`, or `cssTheme: Minimal` mean packages are installed.
+Confirm inheritance to `../AGENTS.md`, bilingual pairs updated together, no duplicated root taxonomy, empty `03 Home/` / `04 Index/`, the two example Bases in `05 Bases/` matching their template property names, drawings root `07 Excalidraw/` with no Handbook path and no stale Collections Excalidraw route, no extra `AGENTS.md` in Home/Index/Bases/Excalidraw, preserved provenance and `## Thinking`, unchanged template/config files unless assigned, config-versus-binary distinction for `.obsidian/plugins/`, and no claim that plugin IDs, `data.json`, or `cssTheme: Minimal` mean packages are installed.

@@ -1,0 +1,35 @@
+filters:
+  and:
+    - '!file.inFolder("90. Settings/02 Templates")'
+    - or:
+        - type == "book"
+        - file.inFolder("80. References/01 Book")
+views:
+  - type: cards
+    name: Shelf
+    order:
+      - file.name
+      - author
+      - status
+      - total_page
+    sort:
+      - property: status
+        direction: DESC
+      - property: file.name
+        direction: ASC
+    image: note.cover_url
+    cardSize: 180
+    imageAspectRatio: 1.5
+  - type: table
+    name: In progress
+    filters:
+      or:
+        - status == "inProgress"
+    order:
+      - file.name
+      - author
+      - status
+      - total_page
+    sort:
+      - property: file.name
+        direction: ASC

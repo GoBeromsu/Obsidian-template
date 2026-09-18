@@ -1,0 +1,30 @@
+filters:
+  and:
+    - type == "video"
+    - '!file.inFolder("90. Settings/02 Templates")'
+views:
+  - type: cards
+    name: By author
+    groupBy:
+      property: author
+      direction: ASC
+    order:
+      - file.name
+      - author
+      - date_published
+    sort:
+      - property: date_published
+        direction: DESC
+    image: note.image
+    cardSize: 220
+    imageAspectRatio: 0.56
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - author
+      - date_published
+      - source_url
+    sort:
+      - property: date_published
+        direction: DESC

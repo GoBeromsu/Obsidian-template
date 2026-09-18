@@ -20,7 +20,7 @@ Capture starts in `00. Inbox` and is filed with the placement guide by ownership
 
 Periodic templates under `90. Settings/02 Templates/auto/` insert navigation wikilinks and, where present, embedded Bases (and one Dataview) views. Those links and views do not create missing notes. The Daily template is the only shipped creator: after it runs, it may add dashboard files for yesterday, today, and tomorrow. It does not cascade into weekly, monthly, quarterly, or yearly notes.
 
-`auto/` templates are for periodic Time notes (folder-template / insert-on-create). `manual/` is on-demand insert (`note.template.md`, `task.template.md`, `project.template.md`, `log.template.md`). Title formats, engines, and creation rules live in `90. Settings/02 Templates/AGENTS.md` and the bilingual template READMEs.
+`auto/` templates are for periodic Time notes (folder-template / insert-on-create). `manual/` is on-demand insert (`note.template.md`, `task.template.md`, `project.template.md`, `log.template.md`, `video.template.md`, `book.template.md`). `90. Settings/05 Bases/` ships two standalone Bases, `Video.base` and `Books.base`, which read the property names those two templates stamp (`type`, `author`, `date_published`, `image`; `type`, `author`, `status`, `total_page`, `cover_url`). Title formats, engines, and creation rules live in `90. Settings/02 Templates/AGENTS.md` and the bilingual template READMEs.
 
 The beginner lecture starts with the blank root `Me.md` personal briefing (`# Me` and five `##` sections: Summary Statement, First Principles, How I Think, Working Preferences, 나에게 영향을 주는 사람), a three-question Gemini interview using sanitized excerpts, and the adopter's own Map of Content (MOC) in `70. Collections/03 MoC` linking existing notes with a reason for each link. Each briefing section opens with a Korean `> 역할:` line stating what to write there. Thinking methods are optional examples to explain when and how they are used, not prescribed steps or asserted beliefs; influences are names only, with none supplied. The briefing is not a filled biography or an AI integration; the general project-hub/log workflow in `15. Work/01 Project` remains available but is not part of this beginner path. Keep filled answers in the adopter's vault; `## Thinking` sections elsewhere stay human-only.
 
@@ -41,7 +41,7 @@ The beginner lecture starts with the blank root `Me.md` personal briefing (`# Me
 | `.agents/skills/` | Vendored Agent Skills; real directory read by Codex and Antigravity |
 | `.claude/skills/` | Symlink to `.agents/skills/`; read by Claude Code |
 
-Do not add, rename, or renumber roots without recording the decision in `90. Settings/01 Guideline/` (both language files). `90. Settings/03 Home/`, `04 Index/`, and `05 Bases/` ship empty.
+Do not add, rename, or renumber roots without recording the decision in `90. Settings/01 Guideline/` (both language files). `90. Settings/03 Home/` and `04 Index/` ship empty; `05 Bases/` ships `Video.base` and `Books.base` as worked examples, and `85. Raw/02 Videos/` ships one real public-metadata video note (Brian's Brain Trinity, Seoul Metaweek 2026 talk) so `Video.base` renders a card out of the box. Both Bases exclude `90. Settings/02 Templates` so template files never appear as results.
 
 ## Development Commands
 
@@ -73,7 +73,8 @@ Open a copied or cloned template directory as an Obsidian vault. No application 
 - `90. Settings/02 Templates/README.md` and `README.ko.md` — equivalent Templater and core Daily notes setup (**Engine setup**).
 - `90. Settings/02 Templates/auto/Daily Note.template.md` — shipped daily template; may create dashboards only.
 - `90. Settings/02 Templates/manual/task.template.md` — on-demand task note; Dashboard query fields `type`, `done`, `gtd`, `project`, `plan`, `due`.
-- `90. Settings/02 Templates/auto/` and `manual/` — other periodic templates and the on-demand note template.
+- `90. Settings/02 Templates/auto/` and `manual/` — other periodic templates and the on-demand note, video, and book templates.
+- `90. Settings/05 Bases/Video.base` and `Books.base` — standalone Bases that read the video and book template properties; they are examples to copy for other note kinds.
 - `.obsidian/app.json`, `appearance.json`, `core-plugins.json`, `community-plugins.json`, and `daily-notes.json` — portable Obsidian settings. Plugin IDs and shipped `data.json` are not installations. `appearance.json` names Minimal; theme files are absent. Two CSS snippets under `.obsidian/snippets/` are shipped. Core Daily notes is on.
 - `.obsidian/plugins/templater-obsidian/data.json` and `.obsidian/plugins/obsidian-excalidraw-plugin/data.json` — allowlisted path config only; not plugin binaries.
 - `90. Settings/07 Excalidraw` — canonical drawings and assets folder.

@@ -33,6 +33,8 @@ authorship: agent
 - `manual/task.template.md`
 - `manual/project.template.md`
 - `manual/log.template.md`
+- `manual/video.template.md`
+- `manual/book.template.md`
 
 ## 엔진 설정 (Daily notes와 Templater 폴더 규칙은 미리 로드됨)
 
@@ -165,7 +167,7 @@ Dashboard를 제외한 모든 행의 Templater 폴더 템플릿은 미리 로드
 
 ## `manual/` — 필요할 때
 
-`manual/note.template.md`는 일반 새 노트 템플릿입니다. `manual/task.template.md`는 Dashboard Tasks와 필드가 맞는 할 일 노트입니다. `manual/project.template.md`는 프로젝트 허브입니다 (`type: project`, `status` 없음). `manual/log.template.md`는 날짜가 있는 로그입니다 (`type: log`, 인용된 허브 위키링크용 `project: []`). 파일을 만들고 이름을 지은 뒤 Templater 삽입 모달에서 호출합니다. 파일·폴더·다른 노트를 만들지 않고 자동으로 실행되지 않습니다. `15. Work/01 Project`와 `15. Work/04 Tasks`에는 폴더 템플릿이 없습니다.
+`manual/note.template.md`는 일반 새 노트 템플릿입니다. `manual/task.template.md`는 Dashboard Tasks와 필드가 맞는 할 일 노트입니다. `manual/project.template.md`는 프로젝트 허브입니다 (`type: project`, `status` 없음). `manual/log.template.md`는 날짜가 있는 로그입니다 (`type: log`, 인용된 허브 위키링크용 `project: []`). `manual/video.template.md`(`type: video`, `author`·`source_url`·`date_published`·`image`)와 `manual/book.template.md`(`type: book`, `author`·`status`·`total_page`·`cover_url`)는 자료 노트용이며, `90. Settings/05 Bases/Video.base`와 `Books.base`가 그 속성 이름을 읽습니다. 템플릿과 Base의 속성 이름을 같게 유지하십시오. 이름이 다르면 Base 화면이 비어 보입니다. 파일을 만들고 이름을 지은 뒤 Templater 삽입 모달에서 호출합니다. 파일·폴더·다른 노트를 만들지 않고 자동으로 실행되지 않습니다. `15. Work/01 Project`와 `15. Work/04 Tasks`에는 폴더 템플릿이 없습니다.
 
 ## 그림
 
