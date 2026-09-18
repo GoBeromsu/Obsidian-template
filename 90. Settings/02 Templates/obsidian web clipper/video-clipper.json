@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "0.1.0",
+  "name": "Video",
+  "behavior": "create",
+  "noteContentFormat": "> [!summary]+ Summary\n> {{\"이 영상의 핵심 내용을 한국어 3줄 bullet point로 요약하라. 각 줄은 '- '로 시작하고 핵심 인사이트를 담아라. 기술 용어는 영어를 유지하되 문장은 한국어로 작성하라. 마크다운 서식 없이 plain text bullet만 출력하라.\"}}\n\n## Thinking\n\n## Resonance\n\n## Key Concepts\n\n{{\"이 영상의 핵심 개념을 한국어로 정리하라. 먼저 #### 도메인 헤더 아래에 이 영상이 속하는 분야 1-3개를 bullet으로 나열하라. 그 다음 #### 주요 개념 헤더 아래에 각 개념을 - ConceptName (한국명) 형식으로 나열하고 하위에 정의, 기능, 계층구조 항목을 들여쓰기하여 작성하라. 영어 개념명은 영어로 유지하고 괄호 안에 한국어를 병기하라. 최대 7개 최소 3개 개념. 잘 알려진 개념이면 [[wikilink]] 형식으로 감싸라.\"}}\n\n## Summary\n\n{{\"이 영상을 한국어로 요약하라. #### 핵심 문제 헤더 아래에 이 영상이 다루는 핵심 질문 1개를 bullet으로 작성하라. #### 주요 논거 헤더 아래에 주요 주장과 근거 2-4개를 각각 bullet으로 작성하라. #### 결론 및 기억할 지식 헤더 아래에 핵심 takeaway 2-4개를 각각 bullet으로 작성하라. 각 bullet은 구체적이고 행동 가능한 수준으로 작성하라. 추상적 표현 금지.\"}}\n\n## Content\n\n{{selectorHtml:ytd-expander.ytd-text-inline-expander-renderer > #content|markdown}}\n\n> [!summary]- Transcript\n> {{selectorHtml:ytd-engagement-panel-section-list-renderer[target-id=\"engagement-panel-searchable-transcript\"] #segments-container|markdown}}",
+  "properties": [
+    {
+      "name": "aliases",
+      "value": "",
+      "type": "multitext"
+    },
+    {
+      "name": "tags",
+      "value": "reference, reference/video",
+      "type": "multitext"
+    },
+    {
+      "name": "type",
+      "value": "video",
+      "type": "text"
+    },
+    {
+      "name": "status",
+      "value": "todo",
+      "type": "text"
+    },
+    {
+      "name": "author",
+      "value": "{{author}}",
+      "type": "text"
+    },
+    {
+      "name": "speaker",
+      "value": "",
+      "type": "multitext"
+    },
+    {
+      "name": "source_url",
+      "value": "{{url}}",
+      "type": "text"
+    },
+    {
+      "name": "date_created",
+      "value": "{{date|date:\"YYYY-MM-DD\"}}",
+      "type": "date"
+    },
+    {
+      "name": "date_modified",
+      "value": "{{date|date:\"YYYY-MM-DD\"}}",
+      "type": "date"
+    },
+    {
+      "name": "date_published",
+      "value": "{{published|date:\"YYYY-MM-DD\"}}",
+      "type": "date"
+    },
+    {
+      "name": "description",
+      "value": "{{\"이 영상의 핵심 메시지를 한국어 1문장으로 요약하라. 20자 이상 50자 이하. plain text만 출력하라.\"}}",
+      "type": "text"
+    },
+    {
+      "name": "image",
+      "value": "{{meta:og:image}}",
+      "type": "text"
+    }
+  ],
+  "triggers": [
+    "https://www.youtube.com/watch",
+    "https://youtu.be/",
+    "https://m.youtube.com/watch"
+  ],
+  "noteNameFormat": "{{title|safe_name}}",
+  "path": "85. Raw/02 Videos/"
+}

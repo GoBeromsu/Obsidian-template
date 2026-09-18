@@ -43,6 +43,7 @@ node_modules/
 !.obsidian/plugins/*/styles.css
 !.obsidian/plugins/templater-obsidian/data.json
 !.obsidian/plugins/obsidian-excalidraw-plugin/data.json
+!.obsidian/plugins/homepage/data.json
 !.obsidian/snippets/
 .obsidian/snippets/*
 !.obsidian/snippets/fix-nested-bullets.css

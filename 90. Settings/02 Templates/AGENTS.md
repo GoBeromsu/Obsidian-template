@@ -27,7 +27,7 @@ Wikilinks are navigation only; they do not create targets. After the Daily templ
 | `auto/` | Periodic files. Folder templates (except Dashboard) are preloaded in Templater `data.json`. |
 | `manual/` | On-demand insert (`note.template.md`, `task.template.md`, `project.template.md`, `log.template.md`, `video.template.md`, `book.template.md` via the Templater modal) |
 
-Only `auto/` and `manual/` are shipped. Do not invent extra Templater categories.
+Only `auto/` and `manual/` are Templater categories. `obsidian web clipper/video-clipper.json` is an import file for the Obsidian Web Clipper browser extension (copied from the instructor vault); it is not a Templater template and is not read by Templater. Do not invent extra Templater categories.
 
 | Template | Folder | Title format | Folder template? |
 | --- | --- | --- | --- |
@@ -65,7 +65,7 @@ Documented adopter commands (not executed here): command palette **Daily notes: 
 - `manual/note.template.md` — generic insert template (`date_created` / `date_modified` via `tp.date.now("YYYY-MM-DD")`).
 - `manual/task.template.md` — task insert whose fields match Dashboard Tasks.
 - `manual/project.template.md` and `manual/log.template.md` — minimal project hub and dated log inserts; no automatic creation or folder mapping. Link the adopter's reviewed `me` context, not a duplicate profile.
-- `manual/video.template.md` (`type: video`; `author`, `source_url`, `date_published`, `image`) and `manual/book.template.md` (`type: book`; `author`, `status`, `total_page`, `cover_url`) — source-note inserts whose property names are read by `../05 Bases/Video.base` and `Books.base`. Keep the names identical on both sides; a renamed property empties the Base view.
+- `manual/video.template.md` (`type: video`; `title`, `author`, `speaker`, `description`, `source_url`, `image`, `video_id`, `duration_seconds`, `language`, `date_published`, `status`, tags `reference`/`reference/video`) and `manual/book.template.md` (`type: book`; `title`, `subtitle`, `author`, `description`, `cover_url`, `total_page`, `date_published`, `date_started`, `date_finished`, `status`, tags `reference`/`reference/book`) — source-note inserts using the instructor vault's property names. `../05 Bases/Video.base` reads `author`, `date_published`, `image`; `Books.base` reads `author`, `status`, `total_page`, `cover_url`. Keep the names identical on both sides; a renamed property empties the Base view. `obsidian web clipper/video-clipper.json` writes the same video properties from a YouTube page.
 - `../../.obsidian/daily-notes.json` — preloaded Daily notes folder and format; core template empty.
 - `../../.obsidian/plugins/templater-obsidian/data.json` — preloaded Templater folder rules (config, not binaries).
 

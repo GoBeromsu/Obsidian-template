@@ -48,7 +48,7 @@ authorship: agent
 | 에이전트가 읽는 규칙 | 볼트 루트, Settings, Templates의 중첩 `AGENTS.md` |
 | 임베디드 보기 | 주기 템플릿의 코어 Bases 표, 대시보드 Overdue는 Dataview 필요 |
 | 에이전트 스킬 | 포함된 `obsidian` 스킬 하나; Claude Code, Codex, Antigravity에서 모두 동작 |
-| 빈 자리 | 홈과 인덱스 폴더는 직접 채웁니다. `90. Settings/05 Bases`에는 예시 `Video.base`·`Books.base`가 있고, `85. Raw/02 Videos`에 실제 영상 노트 한 장이 있어 `Video.base`가 바로 카드 하나를 보여 줍니다 |
+| 빈 자리 | 홈과 인덱스 폴더는 직접 채웁니다. `90. Settings/05 Bases`에는 예시 `Video.base`·`Books.base`가 있고, `85. Raw/02 Videos`에 실제 영상 노트 한 장이 있어 `Video.base`가 바로 카드 하나를 보여 줍니다. 루트 `Home.md`는 첫 목차이며 볼트를 열면 먼저 열립니다 |
 
 ## 수집에서 작업까지
 

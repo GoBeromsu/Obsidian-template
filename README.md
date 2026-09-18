@@ -43,7 +43,7 @@ Start with a working structure, not someone else's personal notes. Download the 
 | Agent-readable rules | Nested `AGENTS.md` at vault root, Settings, and Templates |
 | Embedded views | Core Bases tables in period templates; Dashboard Overdue needs Dataview |
 | Agent Skills | One vendored `obsidian` skill; works in Claude Code, Codex, and Antigravity |
-| Empty placeholders | Home and index folders are yours to fill. `90. Settings/05 Bases` ships example `Video.base` and `Books.base`, and `85. Raw/02 Videos` ships one real video note so `Video.base` renders a card immediately |
+| Empty placeholders | Home and index folders are yours to fill. `90. Settings/05 Bases` ships example `Video.base` and `Books.base`, and `85. Raw/02 Videos` ships one real video note so `Video.base` renders a card immediately. Root `Home.md` is your first table of contents and opens on startup |
 
 ## Capture to work
 

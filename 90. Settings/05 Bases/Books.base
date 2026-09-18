@@ -3,6 +3,7 @@ filters:
     - '!file.inFolder("90. Settings/02 Templates")'
     - or:
         - type == "book"
+        - file.tags.contains("reference/book")
         - file.inFolder("80. References/01 Book")
 views:
   - type: cards

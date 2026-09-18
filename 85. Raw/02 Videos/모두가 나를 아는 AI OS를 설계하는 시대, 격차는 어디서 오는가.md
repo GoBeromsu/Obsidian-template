@@ -1,16 +1,24 @@
 ---
+aliases: []
+title: "모두가 '나를 아는 AI OS'를 설계하는 시대, 격차는 어디서 오는가? | Obsidian × Claude Code | Seoul Metaweek 2026(2026.07.04.)"
+author: Brian's Brain Trinity
+speaker:
+description: 옵시디언 기록을 AI에 연결한 '나를 아는 AI OS'를 계획·기록·콘텐츠·회고 시연으로 보여 주는 발표
+source_url: https://www.youtube.com/watch?v=LWd5J-srk9w
+image: https://img.youtube.com/vi/LWd5J-srk9w/maxresdefault.jpg
+video_id: LWd5J-srk9w
+duration_seconds: 2409
+language: ko
+date_published: 2026-09-18
+status: todo
 type: video
+tags:
+  - reference
+  - reference/video
 created_by: user
 authorship: user
 date_created: 2026-09-19
 date_modified: 2026-09-19
-author: Brian's Brain Trinity
-source_url: https://www.youtube.com/watch?v=LWd5J-srk9w
-date_published: 2026-09-18
-image: https://i.ytimg.com/vi/LWd5J-srk9w/hqdefault.jpg
-duration: 40:09
-tags: []
-aliases: []
 ---
 <!--
 Worked example for `90. Settings/05 Bases/Video.base`. Public metadata only; no transcript was available. Replace or keep it.
