@@ -8,5 +8,6 @@
     "mermaid-wide"
   ],
   "baseFontSizeAction": true,
-  "nativeMenus": true
+  "nativeMenus": true,
+  "accentColor": "#632ef5"
 }

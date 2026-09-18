@@ -1,0 +1,4 @@
+# Changelog
+
+- 2026-07-02 — vault-path SSOT migration: retire `ATARAXIA_*` env vars in favor of `${OBSIDIAN_VAULT_PATH}` + canonical zone folders (`skills/rss/scripts/vault_paths.py`); bring frontmatter up to the 5-key contract (version/allowed-tools/compatibility) and add this changelog. `scripts/fetch_youtube_stats.py` resolves the vault from `OBSIDIAN_VAULT_PATH` with the conventional-location fallback. (v1.0.0 — first versioned release)
+- 2026-09-03 — Require caller-owned transport configuration instead of mutating ambient configuration.; add the Output Contract and eval corpus required by the promote contract (v1.0.1). Verify exactly one `channels?mine=true` result matches `Beomsu Koh | 고범수` before private Analytics queries, emitting a stopped artifact on lookup errors, empty/multiple results, or a mismatch.

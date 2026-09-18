@@ -25,8 +25,22 @@ YouTube/video note in `85. Raw/02 Videos`. Same property names as the instructor
 `85. Raw/02 Videos`의 영상 노트. 강사 vault(Ataraxia)와 Web Clipper 파일 `../obsidian web clipper/video-clipper.json`과 같은 속성 이름을 씁니다. `90. Settings/05 Bases/Video.base`가 author, date_published, image(썸네일 URL)를 읽습니다.
 -->
 
+> [!summary]+ 3 줄 요약
+> - 
+> - 
+> - 
+
+## Detail
+- 
+
+## Thinking
+- 
+
 ## 공명
 What resonated and why I saved it. / 왜 저장했는지, 무엇이 와닿았는지.
+
+## Linking
+- 
 
 ## 핵심
 Key points in the source's own terms. / 원문의 용어로 적은 핵심.
