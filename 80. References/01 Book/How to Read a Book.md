@@ -1,6 +1,6 @@
 ---
 aliases:
-  - "독서의 기술"
+  - "독서의 기술 (애들러)"
 title: "How to Read a Book"
 subtitle:
 author:
