@@ -56,7 +56,7 @@
   "userIgnoreFilters": [
     ".trash"
   ],
-  "vimMode": true,
+  "vimMode": false,
   "useTab": true,
   "foldIndent": true,
   "uriCallbacks": true,

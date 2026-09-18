@@ -33,8 +33,14 @@ node_modules/
 .obsidian/plugins/*
 !.obsidian/plugins/templater-obsidian/
 !.obsidian/plugins/obsidian-excalidraw-plugin/
-.obsidian/plugins/templater-obsidian/*
-.obsidian/plugins/obsidian-excalidraw-plugin/*
+!.obsidian/plugins/homepage/
+!.obsidian/plugins/omnisearch/
+!.obsidian/plugins/obsidian-outliner/
+!.obsidian/plugins/obsidian-linter/
+.obsidian/plugins/*/*
+!.obsidian/plugins/*/main.js
+!.obsidian/plugins/*/manifest.json
+!.obsidian/plugins/*/styles.css
 !.obsidian/plugins/templater-obsidian/data.json
 !.obsidian/plugins/obsidian-excalidraw-plugin/data.json
 !.obsidian/snippets/

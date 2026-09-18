@@ -8,7 +8,7 @@ Read the root `Me.md` first for the user's identity, values, thinking methods, A
 
 ## Project Overview
 
-This directory is a portable Obsidian vault template. It ships a 10-root skeleton, Templater files (including Daily and `manual/task.template.md`), Excalidraw drawings under `90. Settings/07 Excalidraw`, and portable `.obsidian` JSON (including Daily notes enablement and Templater `data.json`) without personal notes, credentials, plugin caches, plugin or theme binaries, or machine-specific state. Faith (`60. Saint`) and publication (`25. Digital Garden`) roots are intentionally absent. There is no Handbook folder.
+This directory is a portable Obsidian vault template. It ships a 10-root skeleton, Templater files (including Daily and `manual/task.template.md`), Excalidraw drawings under `90. Settings/07 Excalidraw`, and portable `.obsidian` JSON (including Daily notes enablement and Templater `data.json`) without personal notes, credentials, plugin caches, theme binaries, or machine-specific state. Six community plugins ship pre-installed as binaries (`main.js`, `manifest.json`, `styles.css`) under `.obsidian/plugins/`: Templater, Homepage, Omnisearch, Excalidraw, Outliner, Linter. Bases is a core plugin and is enabled. Other IDs in `community-plugins.json` remain configuration only. Faith (`60. Saint`) and publication (`25. Digital Garden`) roots are intentionally absent. There is no Handbook folder.
 
 Human start, placement, writing/AI, agent-skills, and template guides ship as English/Korean pairs. The two languages are equivalent translations of one contract, not two note homes. Neither language outranks the other. When those instructions change, update both files.
 
