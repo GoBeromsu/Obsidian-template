@@ -7,6 +7,10 @@ This directory holds vendored [Agent Skills](https://agentskills.io): one folder
 | Skill | Purpose | Source |
 | --- | --- | --- |
 | `obsidian` | Obsidian mechanics — Markdown and properties, Bases, Canvas, Mermaid, `obsidian-cli`, Web Clipper, plugin doctor, headless Sync | [GoBeromsu/craft-skills](https://github.com/GoBeromsu/craft-skills) |
+| `video` | One YouTube URL → one note in `85. Raw/02 Videos/` with the `manual/video.template.md` property names, so it appears in `Video.base`. Standard-library metadata script, no login | this template |
+| `book` | Book URL/title → note in `80. References/01 Book/` with frontmatter and ToC skeleton (yes24/aladin fetchers) | instructor vault |
+| `skill-creator` | Scaffold and validate a new skill folder | instructor vault |
+| `youtube-upload`, `youtube-channel-ops` | Instructor workflows for publishing and analysing a channel; need API credentials | instructor vault |
 
 ## Provenance
 
