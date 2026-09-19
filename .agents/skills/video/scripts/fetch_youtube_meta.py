@@ -32,7 +32,10 @@ def main():
         m = re.search(r'"lengthSeconds":"(\d+)"', html)
         if m: meta['duration_seconds'] = int(m.group(1))
         m = re.search(r'"shortDescription":"((?:[^"\\]|\\.)*)"', html)
-        if m: meta['description'] = json.loads('"' + m.group(1) + '"').split('\n')[0][:200]
+        if m:
+            first = json.loads('"' + m.group(1) + '"').split('\n')[0]
+            first = re.sub(r'https?://\S+', '', first).strip(' -:|·')
+            meta['description'] = first[:200]
         m = re.search(r'"defaultAudioLanguage":"([a-zA-Z-]+)"', html)
         if m: meta['language'] = m.group(1).split('-')[0]
     except Exception as e:  # metadata beyond oEmbed is best effort

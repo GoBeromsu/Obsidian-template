@@ -24,12 +24,13 @@ Turn one YouTube URL into one note at `85. Raw/02 Videos/<title>.md` with the sa
    - `description`: one line from the video description or the user's words · `source_url`, `image`, `video_id`, `duration_seconds`, `language`, `date_published` from step 1
    - `status: todo`, `type: video`, tags `reference` and `reference/video`, `created_by: user`, `authorship: user`
    - body: keep the template's headings `## 공명`, `## 핵심`, `## 내 말로`, `## 다음 질문`, `## Transcript`; fill `## 핵심` with the video's public description or chapter list when available; leave `## 공명`, `## 내 말로`, `## 다음 질문` for the user
-4. **Verify**: read the file back, confirm the frontmatter parses (no tabs, quoted title), and tell the user to open `90. Settings/05 Bases/Video.base` to see the card.
+4. **Verify**: read the file back and confirm the frontmatter parses. Wrap `title`, `author`, and `description` in double quotes (escape inner `"` as `\"`), keep `description` to one line with no URL and no `: `, and no tabs anywhere. Then tell the user to open `90. Settings/05 Bases/Video.base` to see the card. If the card does not appear, the frontmatter did not parse; fix quoting first.
 
 ## Rules
 
 - Do not paste a transcript unless the user provides one or asks for it; `## Transcript` stays empty by default.
 - Do not invent `date_published`, `duration_seconds`, or `description`; leave a field empty when the source does not provide it.
+- A colon followed by a space inside an unquoted value breaks YAML and hides the note from every Base. Always quote `title`, `author`, and `description`.
 - Do not create a people note for the channel; `author` is plain text. The user may turn it into a wikilink later.
 - Do not touch other notes, the template, or the Base. One request, one file.
 - If a note with the same `video_id` already exists in `85. Raw/02 Videos/`, report it and stop instead of duplicating.
